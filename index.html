@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TV Mathshub | Premier Online Mathematics Tutor Uganda</title>
+  <meta name="description" content="Expert online mathematics tutoring for O-Level, A-Level, and University students. Join 500+ successful students. Book your session today!" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body { font-family: 'Segoe UI', system-ui, sans-serif; scroll-behavior: smooth; }
+    .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%); }
+    .gradient-text { background: linear-gradient(135deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .pulse-animation { animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.5); } 70% { box-shadow: 0 0 0 20px rgba(59, 130, 246, 0); } 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); } }
+    .floating-whatsapp { position: fixed; bottom: 30px; right: 30px; z-index: 1000; }
+    .resource-card { transition: all 0.3s ease; }
+    .resource-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    .channel-btn { transition: all 0.3s ease; }
+    .channel-btn:hover { transform: scale(1.05); }
+    .aspect-w-16 { position: relative; padding-bottom: 56.25%; }
+    .aspect-w-16 iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- 1. FLOATING WHATSAPP BUTTON (Always visible)                 -->
+  <!-- ============================================================ -->
+  <a href="https://wa.me/256784053068?text=Hello%20TV%20Mathshub%2C%20I%20need%20a%20tutor%20urgently" 
+     class="floating-whatsapp bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl pulse-animation transition flex items-center gap-2">
+    <i class="fab fa-whatsapp text-3xl"></i>
+    <span class="hidden md:inline font-bold">Chat Now</span>
+  </a>
+
+  <!-- ============================================================ -->
+  <!-- 2. NAVIGATION (Fixed at top)                                 -->
+  <!-- ============================================================ -->
+  <nav class="bg-white/90 backdrop-blur-md shadow-sm fixed w-full z-50 top-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <span class="text-2xl font-bold text-blue-700">TV Mathshub</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About</a>
+          <a href="#subjects" class="text-gray-700 hover:text-blue-600 font-medium">Subjects</a>
+          <a href="#resources" class="text-gray-700 hover:text-blue-600 font-medium">Resources</a>
+          <a href="#uneb-papers" class="text-gray-700 hover:text-blue-600 font-medium">UNEB Papers</a>
+          <a href="#community" class="text-gray-700 hover:text-blue-600 font-medium">Community</a>
+          <a href="#pricing" class="text-gray-700 hover:text-blue-600 font-medium">Pricing</a>
+          <a href="#testimonials" class="text-gray-700 hover:text-blue-600 font-medium">Success Stories</a>
+        </div>
+        <a href="https://wa.me/256784053068" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition text-sm font-semibold">
+          Book Now
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================ -->
+  <!-- 3. HERO BANNER (First impression)                            -->
+  <!-- ============================================================ -->
+  <header class="hero-bg text-white pt-28 pb-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-block bg-blue-500/20 backdrop-blur-sm px-4 py-1 rounded-full text-sm mb-6">
+            🏆 Uganda's Top Online Mathematics Tutor
+          </div>
+          <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-4">
+            Master Mathematics <br />
+            <span class="text-yellow-300">From Anywhere</span>
+          </h1>
+          <p class="text-xl text-blue-100 mb-6">
+            Join <strong class="text-white">500+ students</strong> who've transformed their grades with personalized online tutoring.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://wa.me/256784053068?text=Hello%20TV%20Mathshub%2C%20I%20want%20to%20book%20a%20free%20consultation" 
+               class="bg-yellow-400 text-blue-900 font-bold px-10 py-4 rounded-full hover:bg-yellow-300 transition text-lg text-center">
+              🎓 Free Consultation
+            </a>
+            <a href="#about" 
+               class="bg-white/10 backdrop-blur-sm border-2 border-white text-white font-semibold px-10 py-4 rounded-full hover:bg-white/20 transition text-lg text-center">
+              Learn About Me
+            </a>
+          </div>
+          <div class="flex items-center gap-6 mt-8 text-sm">
+            <span class="flex items-center gap-2"><i class="fas fa-check-circle text-green-400"></i> 500+ Students</span>
+            <span class="flex items-center gap-2"><i class="fas fa-check-circle text-green-400"></i> 98% Success Rate</span>
+            <span class="flex items-center gap-2"><i class="fas fa-check-circle text-green-400"></i> 8+ Years Experience</span>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="relative">
+            <div class="w-72 h-72 rounded-full border-4 border-white overflow-hidden shadow-2xl bg-gray-300">
+              <!-- Replace with your actual photo -->
+              <img src="https://ui-avatars.com/api/?name=TV+Mathshub&size=300&background=1e3a8a&color=fff&bold=true" 
+                   alt="Turyomurugyendo Vicent" class="w-full h-full object-cover" />
+            </div>
+            <div class="absolute -bottom-4 -right-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+              <i class="fas fa-video mr-2"></i>Online
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- 4. ABOUT ME & EXPERIENCE SECTION (NEW - Placed here)         -->
+  <!-- ============================================================ -->
+  <section id="about" class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-blue-600 font-semibold">ABOUT ME</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-2">Your Trusted Mathematics <span class="gradient-text">Expert</span></h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Over 8 years of teaching experience across Uganda's top institutions</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <!-- Left Column: Personal Info & Bio -->
+        <div>
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center text-4xl text-blue-600 border-4 border-blue-200 overflow-hidden">
+              <!-- Replace with your actual photo -->
+              <img src="https://ui-avatars.com/api/?name=TV&size=100&background=1e3a8a&color=fff&bold=true" alt="TV" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-800">Turyomurugyendo Vicent</h3>
+              <p class="text-blue-600 font-semibold">(TV) - Mathematics Specialist</p>
+            </div>
+          </div>
+
+          <div class="text-gray-600 space-y-4">
+            <p>
+              I am a passionate mathematics educator dedicated to transforming how students understand 
+              and appreciate mathematics. With over <strong class="text-blue-600">8 years of teaching experience</strong> 
+              across Uganda's leading institutions, I've helped <strong class="text-blue-600">500+ students</strong> 
+              achieve their academic goals.
+            </p>
+            <p>
+              My teaching philosophy is simple: <strong>every student can excel in mathematics</strong> with 
+              the right guidance, patience, and personalized approach. I break down complex concepts 
+              into simple, understandable steps.
+            </p>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="grid grid-cols-2 gap-4 mt-8">
+            <div class="bg-blue-50 p-4 rounded-xl text-center">
+              <span class="text-2xl font-bold text-blue-600">500+</span>
+              <p class="text-sm text-gray-600">Students Taught</p>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-xl text-center">
+              <span class="text-2xl font-bold text-blue-600">8+</span>
+              <p class="text-sm text-gray-600">Years Experience</p>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-xl text-center">
+              <span class="text-2xl font-bold text-blue-600">2</span>
+              <p class="text-sm text-gray-600">Degrees (MSc & BSc)</p>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-xl text-center">
+              <span class="text-2xl font-bold text-blue-600">6</span>
+              <p class="text-sm text-gray-600">Institutions</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Qualifications & Experience -->
+        <div class="space-y-6">
+          <!-- Qualifications -->
+          <div class="bg-gray-50 p-6 rounded-2xl border-l-4 border-blue-600">
+            <h4 class="font-bold text-lg mb-4 flex items-center gap-2">
+              <i class="fas fa-graduation-cap text-blue-600"></i> Academic Qualifications
+            </h4>
+            <div class="space-y-3">
+              <div class="bg-white p-4 rounded-xl shadow-sm">
+                <p class="font-semibold text-blue-700">Master of Science in Mathematics</p>
+                <p class="text-gray-600 text-sm">Marwadi University, India</p>
+                <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full mt-1">First Class with Distinction</span>
+              </div>
+              <div class="bg-white p-4 rounded-xl shadow-sm">
+                <p class="font-semibold text-blue-700">Bachelor of Science in Education</p>
+                <p class="text-gray-600 text-sm">Physics & Mathematics • Gulu University, Uganda</p>
+                <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full mt-1">First Class</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Teaching Experience -->
+          <div class="bg-gray-50 p-6 rounded-2xl border-l-4 border-green-600">
+            <h4 class="font-bold text-lg mb-4 flex items-center gap-2">
+              <i class="fas fa-chalkboard-teacher text-green-600"></i> Teaching Experience
+            </h4>
+            <div class="space-y-3">
+              <div class="bg-white p-4 rounded-xl shadow-sm">
+                <p class="font-semibold">Muni University, Arua</p>
+                <p class="text-gray-600 text-sm">Assistant Lecturer in Mathematics</p>
+              </div>
+              <div class="bg-white p-4 rounded-xl shadow-sm">
+                <p class="font-semibold">St. Joseph's College Ombaci, Arua</p>
+                <p class="text-gray-600 text-sm">Mathematics Teacher</p>
+              </div>
+              <div class="bg-white p-4 rounded-xl shadow-sm">
+                <p class="font-semibold">Mandela Secondary School, Hoima</p>
+                <p class="text-gray-600 text-sm">Mathematics Teacher</p>
+              </div>
+              <div class="bg-white p-4 rounded-xl shadow-sm">
+                <p class="font-semibold">St. John Bosco Seminary, Hoima</p>
+                <p class="text-gray-600 text-sm">Mathematics Teacher</p>
+              </div>
+              <div class="bg-white p-4 rounded-xl shadow-sm">
+                <p class="font-semibold">Isingiro Secondary School, Isingiro District</p>
+                <p class="text-gray-600 text-sm">Mathematics Teacher</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center mt-12">
+        <a href="https://wa.me/256784053068?text=Hello%20TV%20Mathshub%2C%20I%20want%20to%20learn%20from%20you" 
+           class="inline-block bg-blue-600 text-white font-bold px-10 py-4 rounded-full hover:bg-blue-700 transition text-lg">
+          🎯 Book a Session with Me
+        </a>
+        <p class="text-sm text-gray-500 mt-3">Join 500+ students who've excelled under my guidance</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 5. ACHIEVEMENTS SECTION (NEW - Placed here)                  -->
+  <!-- ============================================================ -->
+  <section id="achievements" class="py-16 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="text-blue-600 font-semibold">ACHIEVEMENTS</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-2">My <span class="gradient-text">Accomplishments</span></h2>
+        <p class="text-gray-600 mt-4">Recognition and milestones from my teaching career</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition text-center border-t-4 border-yellow-400">
+          <div class="text-5xl mb-4">🏆</div>
+          <h4 class="font-bold text-xl mb-2">First Class Degrees</h4>
+          <p class="text-gray-600 text-sm">BSc (Gulu University) & MSc (Marwadi University) with Distinction</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition text-center border-t-4 border-blue-400">
+          <div class="text-5xl mb-4">📊</div>
+          <h4 class="font-bold text-xl mb-2">98% Success Rate</h4>
+          <p class="text-gray-600 text-sm">Students achieving their target grades after my tutoring</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition text-center border-t-4 border-green-400">
+          <div class="text-5xl mb-4">🌍</div>
+          <h4 class="font-bold text-xl mb-2">International Experience</h4>
+          <p class="text-gray-600 text-sm">Studied and taught across Uganda and India</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition text-center border-t-4 border-purple-400">
+          <div class="text-5xl mb-4">📚</div>
+          <h4 class="font-bold text-xl mb-2">100+ Resources</h4>
+          <p class="text-gray-600 text-sm">Created extensive study materials for students</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition text-center border-t-4 border-red-400">
+          <div class="text-5xl mb-4">🎓</div>
+          <h4 class="font-bold text-xl mb-2">500+ Students</h4>
+          <p class="text-gray-600 text-sm">Transformed academic journeys across all levels</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition text-center border-t-4 border-indigo-400">
+          <div class="text-5xl mb-4">📝</div>
+          <h4 class="font-bold text-xl mb-2">UNEB Examiner</h4>
+          <p class="text-gray-600 text-sm">Experience marking national mathematics examinations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 6. VIDEO PREVIEW SECTION (NEW - Placed here)                 -->
+  <!-- ============================================================ -->
+ <!-- ============================================================ -->
+<!-- VIDEO PREVIEW SECTION (FIXED)                                 -->
+<!-- ============================================================ -->
+<!-- ============================================================ -->
+<!-- YOUTUBE CHANNEL SECTION (Replaces Video Preview)              -->
+<!-- ============================================================ -->
+<section id="youtube-channel" class="py-16 px-4 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center">
+        <div class="inline-block bg-red-50 p-4 rounded-full mb-6">
+          <i class="fab fa-youtube text-6xl text-red-600"></i>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Watch My <span class="gradient-text">YouTube Tutorials</span></h2>
+        <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
+          Subscribe to my YouTube channel for free math lessons, exam tips, and step-by-step solutions
+        </p>
+        
+        <a href="https://www.youtube.com/@TVMATHSHUB" target="_blank" 
+           class="inline-flex items-center gap-3 bg-red-600 text-white px-10 py-5 rounded-full hover:bg-red-700 transition text-xl font-semibold shadow-lg hover:shadow-xl">
+          <i class="fab fa-youtube text-2xl"></i>
+          Subscribe Now
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        
+        <div class="mt-6 flex justify-center gap-8 text-sm text-gray-500">
+          <span><i class="fas fa-check-circle text-green-500 mr-1"></i> Free Lessons</span>
+          <span><i class="fas fa-check-circle text-green-500 mr-1"></i> Exam Tips</span>
+          <span><i class="fas fa-check-circle text-green-500 mr-1"></i> Step-by-Step Solutions</span>
+        </div>
+        
+        <div class="mt-8 p-4 bg-gray-50 rounded-xl inline-block">
+          <p class="text-gray-600">
+            <i class="fas fa-link text-blue-600 mr-2"></i>
+            Channel: <a href="https://www.youtube.com/@TVMATHSHUB" target="_blank" class="text-blue-600 hover:underline font-medium">
+              youtube.com/@TVMATHSHUB
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+  <!-- ============================================================ -->
+  <!-- 7. BOOKING SECTION (NEW - Placed here)                       -->
+  <!-- ============================================================ -->
+  <section id="booking" class="py-16 px-4 bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="text-blue-600 font-semibold">BOOK A SESSION</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-2">Schedule Your <span class="gradient-text">Free Consultation</span></h2>
+        <p class="text-gray-600 mt-4">Fill in the form below and I'll get back to you within 24 hours</p>
+      </div>
+
+      <!-- Responsive Google Form -->
+      <div class="bg-white p-3 sm:p-6 md:p-8 rounded-2xl shadow-lg">
+        <div class="relative w-full" style="padding-bottom: 100%; height: 0; min-height: 600px;">
+          <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeQbMl62gKzugQGz4KDwfSa5J8W6jOHALyX895TNd1IHebstg/viewform?embedded=true" 
+            class="absolute top-0 left-0 w-full h-full rounded-xl"
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0"
+            allowfullscreen
+          >Loading booking form...</iframe>
+        </div>
+      </div>
+
+      <!-- WhatsApp Alternative -->
+      <div class="text-center mt-8">
+        <p class="text-gray-600 mb-4">Prefer to book via WhatsApp?</p>
+        <a href="https://wa.me/256784053068?text=Hello%20TV%20Mathshub%2C%20I%20want%20to%20book%20a%20free%20consultation" 
+           class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full transition text-base sm:text-lg">
+          <i class="fab fa-whatsapp mr-2"></i> Book on WhatsApp
+        </a>
+      </div>
+    </div>
+</section>
+
+     
+  <!-- ============================================================ -->
+  <!-- 8. SOCIAL PROOF STRIP                                        -->
+  <!-- ============================================================ -->
+  <div class="bg-gray-100 py-3 overflow-hidden border-y border-gray-200">
+    <div class="flex animate-marquee whitespace-nowrap">
+      <span class="mx-8">⭐ 4.9/5 Rating</span>
+      <span class="mx-8">🎯 500+ Students</span>
+      <span class="mx-8">📚 100+ Resources</span>
+      <span class="mx-8">🏆 Top Rated Tutor</span>
+      <span class="mx-8">💯 Exam Success</span>
+      <span class="mx-8">🌍 Students in 10+ Countries</span>
+    </div>
+  </div>
+
+ 
+  <!-- Subjects Section -->
+  <section id="subjects" class="py-20 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-blue-600 font-semibold">WHAT I TEACH</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-2">Comprehensive Mathematics <br class="hidden md:block" /><span class="gradient-text">For Every Level</span></h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Structured curriculum following the Ugandan syllabus with international standards.</p>
+      </div>
+
+      <!-- O-Level -->
+      <div class="mb-16">
+        <h3 class="text-3xl font-bold mb-6 flex items-center gap-3"><span class="text-4xl">📐</span> O-Level Mathematics</h3>
+        <div class="grid md:grid-cols-4 gap-4">
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-blue-500">
+            <i class="fas fa-calculator text-2xl text-blue-600 mb-2"></i>
+            <h4 class="font-bold">Number & Algebra</h4>
+            <p class="text-sm text-gray-600">Systems, equations, quadratics, inequalities</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-green-500">
+            <i class="fas fa-shapes text-2xl text-green-600 mb-2"></i>
+            <h4 class="font-bold">Geometry & Trig</h4>
+            <p class="text-sm text-gray-600">Angles, circles, ratios, bearings</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-purple-500">
+            <i class="fas fa-chart-bar text-2xl text-purple-600 mb-2"></i>
+            <h4 class="font-bold">Statistics</h4>
+            <p class="text-sm text-gray-600">Data, probability, tree diagrams</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500">
+            <i class="fas fa-coins text-2xl text-orange-600 mb-2"></i>
+            <h4 class="font-bold">Commercial Math</h4>
+            <p class="text-sm text-gray-600">Interest, tax, exchange rates</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- A-Level -->
+      <div class="mb-16">
+        <h3 class="text-3xl font-bold mb-6 flex items-center gap-3"><span class="text-4xl">📐</span> A-Level Mathematics (Principal)</h3>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-indigo-500">
+            <i class="fas fa-square-root-alt text-2xl text-indigo-600 mb-2"></i>
+            <h4 class="font-bold">Construct 1: Algebra</h4>
+            <p class="text-sm text-gray-600">Complex numbers, series,Numerical concepts , permutations& Combinations , Equations and Inequalities </p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-red-500">
+            <i class="fas fa-vector-square text-2xl text-red-600 mb-2"></i>
+            <h4 class="font-bold">Construct 2: Geometry</h4>
+            <p class="text-sm text-gray-600">Coordinate Geometry 1 & 2 , vectors, trigonometry</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-pink-500">
+            <i class="fas fa-infinity text-2xl text-pink-600 mb-2"></i>
+            <h4 class="font-bold">Construct 3: Calculus</h4>
+            <p class="text-sm text-gray-600">Differentiation, integration,Partial Fractions, DEs</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-teal-500">
+            <i class="fas fa-dice text-2xl text-teal-600 mb-2"></i>
+            <h4 class="font-bold">Construct 4: Statistics</h4>
+            <p class="text-sm text-gray-600">Descriptive statistics, Correlation and scatter diagrams,probability theory , Random variables, Sampling distributions , probability distributions</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-amber-500">
+            <i class="fas fa-cog text-2xl text-amber-600 mb-2"></i>
+            <h4 class="font-bold">Construct 5: Mechanics</h4>
+            <p class="text-sm text-gray-600">Dynamics 1 & 2 , kinematics, forces</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-cyan-500 ring-2 ring-cyan-200">
+            <i class="fas fa-code text-2xl text-cyan-600 mb-2"></i>
+            <h4 class="font-bold">Construct 6: Numerical Methods</h4>
+            <p class="text-sm text-gray-600">Error analysis, Trapezium rule, Iterative methods, Flowcharts</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- University -->
+      <div>
+        <h3 class="text-3xl font-bold mb-6 flex items-center gap-3"><span class="text-4xl">🎓</span> University Level</h3>
+        <div class="grid md:grid-cols-4 gap-4">
+          <div class="bg-white p-6 rounded-xl shadow-sm text-center">Linear Algebra</div>
+          <div class="bg-white p-6 rounded-xl shadow-sm text-center">Real Analysis</div>
+          <div class="bg-white p-6 rounded-xl shadow-sm text-center">Topology</div>
+          <div class="bg-white p-6 rounded-xl shadow-sm text-center">Numerical Analysis</div>
+          <div class="bg-white p-6 rounded-xl shadow-sm text-center">Probability & Stats</div>
+          <div class="bg-white p-6 rounded-xl shadow-sm text-center">Advanced Calculus</div>
+          <div class="bg-white p-6 rounded-xl shadow-sm text-center">Research Methods</div>
+          <div class="bg-white p-6 rounded-xl shadow-sm text-center">Engineering Math</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES LIBRARY - How to upload materials -->
+  <section id="resources" class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-blue-600 font-semibold">FREE RESOURCES</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-2">Download Study <span class="gradient-text">Materials</span></h2>
+        <p class="text-gray-600 mt-4">Click any resource below to download.</p>
+      </div>
+
+      <!-- Resource Cards - Add your materials here -->
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <div class="resource-card bg-gray-50 p-6 rounded-xl border-2 border-gray-200 hover:border-blue-400">
+          <div class="flex items-start justify-between">
+            <div>
+              <i class="fas fa-file-pdf text-3xl text-red-500 mb-3"></i>
+              <h4 class="font-bold text-lg">A-Level Pure Math P1</h4>
+              <p class="text-sm text-gray-600">2025 Past Paper with Worked Solutions</p>
+            </div>
+            <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full">NEW</span>
+          </div>
+          <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition text-sm">
+            <i class="fas fa-download mr-2"></i>Download PDF
+          </a>
+        </div>
+
+        <div class="resource-card bg-gray-50 p-6 rounded-xl border-2 border-gray-200 hover:border-blue-400">
+          <div class="flex items-start justify-between">
+            <div>
+              <i class="fas fa-file-pdf text-3xl text-red-500 mb-3"></i>
+              <h4 class="font-bold text-lg">O-Level Revision Notes</h4>
+              <p class="text-sm text-gray-600">Complete revision guide for UNEB</p>
+            </div>
+            <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">POPULAR</span>
+          </div>
+          <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition text-sm">
+            <i class="fas fa-download mr-2"></i>Download PDF
+          </a>
+        </div>
+
+        <div class="resource-card bg-gray-50 p-6 rounded-xl border-2 border-gray-200 hover:border-blue-400">
+          <div class="flex items-start justify-between">
+            <div>
+              <i class="fas fa-file-pdf text-3xl text-red-500 mb-3"></i>
+              <h4 class="font-bold text-lg">Numerical Methods Guide</h4>
+              <p class="text-sm text-gray-600">Error analysis, Trapezium rule, Iterative methods</p>
+            </div>
+            <span class="bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded-full">FREE</span>
+          </div>
+          <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition text-sm">
+            <i class="fas fa-download mr-2"></i>Download PDF
+          </a>
+        </div>
+      </div>
+
+     
+ </section>
+
+  <!-- ============================================================ -->
+  <!-- UNEB SAMPLE PAPERS SECTION (NEW - PLACED HERE)               -->
+  <!-- ============================================================ -->
+  <section id="uneb-papers" class="py-16 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="text-blue-600 font-semibold">UNEB MATERIALS</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-2">Official <span class="gradient-text">Sample Papers & Guides</span></h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">UACE Principal and Subsidiary Mathematics sample papers with official scoring guides for 2026.</p>
+      </div>
+
+      <!-- Main Folder Link -->
+      <div class="text-center mb-10">
+        <a href="https://drive.google.com/drive/folders/1l2H8Z2v7b40O8dzAUFPJDKVUDx1TBXmD?usp=drive_link" target="_blank" 
+           class="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition shadow-lg hover:shadow-xl text-lg font-semibold">
+          <i class="fas fa-folder-open text-2xl"></i>
+          View All Files on Google Drive
+          <i class="fas fa-external-link-alt text-sm"></i>
+        </a>
+        <p class="text-sm text-gray-500 mt-2">Click to access the complete folder with all papers and guides</p>
+      </div>
+
+      <!-- Individual Paper Cards -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Principal Paper 1 -->
+        <div class="resource-card bg-white p-6 rounded-xl border-2 border-gray-200 hover:border-blue-400 shadow-sm hover:shadow-lg transition">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2">Principal</span>
+              <h4 class="font-bold text-lg">P425/1 Mathematics Paper 1</h4>
+              <p class="text-sm text-gray-600">UACE Sample Paper 2026</p>
+            </div>
+            <i class="fas fa-file-pdf text-3xl text-red-500"></i>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <a href="https://drive.google.com/file/d/17llzryEACM3TS2isntZFKULu-o1LvDZL/view?usp=drive_link" target="_blank" 
+               class="flex-1 text-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+              <i class="fas fa-download mr-1"></i> Paper
+            </a>
+            <a href="https://drive.google.com/file/d/1-zvWQUzAmZgIlSEZcQd6QQsuRdsc4kQv/view?usp=drive_link" target="_blank" 
+               class="flex-1 text-center bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition text-sm">
+              <i class="fas fa-check-circle mr-1"></i> Scoring Guide
+            </a>
+          </div>
+        </div>
+
+        <!-- Principal Paper 2 -->
+        <div class="resource-card bg-white p-6 rounded-xl border-2 border-gray-200 hover:border-blue-400 shadow-sm hover:shadow-lg transition">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2">Principal</span>
+              <h4 class="font-bold text-lg">P425/2 Mathematics Paper 2</h4>
+              <p class="text-sm text-gray-600">UACE Sample Paper 2026</p>
+            </div>
+            <i class="fas fa-file-pdf text-3xl text-red-500"></i>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <a href="https://drive.google.com/file/d/1Fo-_hudHI-9-Vivg4WILKkIDF449CWmB/view?usp=drive_link" target="_blank" 
+               class="flex-1 text-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+              <i class="fas fa-download mr-1"></i> Paper
+            </a>
+            <a href="https://drive.google.com/file/d/1hkyV1tCo4p5BlVqj5IGAyx9kZNAxWqwc/view?usp=drive_link" target="_blank" 
+               class="flex-1 text-center bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition text-sm">
+              <i class="fas fa-check-circle mr-1"></i> Scoring Guide
+            </a>
+          </div>
+        </div>
+
+        <!-- Subsidiary Paper -->
+        <div class="resource-card bg-white p-6 rounded-xl border-2 border-gray-200 hover:border-blue-400 shadow-sm hover:shadow-lg transition">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2">Subsidiary</span>
+              <h4 class="font-bold text-lg">S475/1 Mathematics Paper</h4>
+              <p class="text-sm text-gray-600">UACE Sample Paper 2026</p>
+            </div>
+            <i class="fas fa-file-pdf text-3xl text-red-500"></i>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <a href="https://drive.google.com/file/d/1k05TtJYjxqC2vxE1v3D_p2QKaBoyRGIi/view?usp=drive_link" target="_blank" 
+               class="flex-1 text-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+              <i class="fas fa-download mr-1"></i> Paper
+            </a>
+            <a href="https://drive.google.com/file/d/183VICfdauaPXGxkZ0lha50ySvLD-LRSt/view?usp=drive_link" target="_blank" 
+               class="flex-1 text-center bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition text-sm">
+              <i class="fas fa-check-circle mr-1"></i> Scoring Guide
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Note about the files -->
+      <div class="mt-10 bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl">
+        <div class="flex items-start">
+          <div class="flex-shrink-0">
+            <i class="fas fa-info-circle text-yellow-500 text-xl"></i>
+          </div>
+          <div class="ml-3">
+            <p class="text-sm text-yellow-700">
+              <strong>📌 Note:</strong> All files are hosted on Google Drive. Click the "Paper" or "Scoring Guide" buttons to download individual files. 
+              Use the "View All Files" button above to see the complete folder.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  </section>
+
+  <!-- COMMUNITY SECTION - All your channels integrated -->
+  <section id="community" class="py-20 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-blue-600 font-semibold">JOIN THE COMMUNITY</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-2">Connect With <span class="gradient-text">Other Students</span></h2>
+        <p class="text-gray-600 mt-4">Join our growing community of mathematics enthusiasts</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- YouTube -->
+        <a href="http://www.youtube.com/@TVMATHSHUB" target="_blank" 
+           class="channel-btn bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl text-center border-2 border-red-100 hover:border-red-500 transition group">
+          <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center text-2xl text-white mx-auto mb-4 group-hover:scale-110 transition">
+            <i class="fab fa-youtube"></i>
+          </div>
+          <h4 class="font-bold text-lg">YouTube</h4>
+          <p class="text-sm text-gray-600">Watch video lessons</p>
+          <span class="text-red-500 text-sm font-semibold">@TVMATHSHUB →</span>
+        </a>
+
+        <!-- WhatsApp Channel -->
+        <a href="https://whatsapp.com/channel/0029VbAciLzCnA7mDRzO4r1b" target="_blank" 
+           class="channel-btn bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl text-center border-2 border-green-100 hover:border-green-500 transition group">
+          <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-2xl text-white mx-auto mb-4 group-hover:scale-110 transition">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <h4 class="font-bold text-lg">WhatsApp Channel</h4>
+          <p class="text-sm text-gray-600">Announcements & updates</p>
+          <span class="text-green-500 text-sm font-semibold">Join Channel →</span>
+        </a>
+
+        <!-- WhatsApp Group -->
+        <a href="https://chat.whatsapp.com/CtpwI6QnQSf9YafxtlQbQX?s=cl&p=a&mlu=3" target="_blank" 
+           class="channel-btn bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl text-center border-2 border-green-100 hover:border-green-500 transition group">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-2xl text-white mx-auto mb-4 group-hover:scale-110 transition">
+            <i class="fas fa-users"></i>
+          </div>
+          <h4 class="font-bold text-lg">WhatsApp Group</h4>
+          <p class="text-sm text-gray-600">A-Level Community</p>
+          <span class="text-green-600 text-sm font-semibold">Join Group →</span>
+        </a>
+
+        <!-- Facebook Messenger -->
+        <a href="https://m.me/turyomurugyendo.vicent.7" target="_blank" 
+           class="channel-btn bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl text-center border-2 border-blue-100 hover:border-blue-500 transition group">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl text-white mx-auto mb-4 group-hover:scale-110 transition">
+            <i class="fab fa-facebook-messenger"></i>
+          </div>
+          <h4 class="font-bold text-lg">Facebook Messenger</h4>
+          <p class="text-sm text-gray-600">Direct messaging</p>
+          <span class="text-blue-600 text-sm font-semibold">Message Me →</span>
+        </a>
+
+        <!-- Telegram -->
+        <a href="https://t.me/tvmathshub" target="_blank" 
+           class="channel-btn bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl text-center border-2 border-blue-100 hover:border-blue-400 transition group col-span-2 lg:col-span-1">
+          <div class="w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center text-2xl text-white mx-auto mb-4 group-hover:scale-110 transition">
+            <i class="fab fa-telegram-plane"></i>
+          </div>
+          <h4 class="font-bold text-lg">Telegram</h4>
+          <p class="text-sm text-gray-600">Files & announcements</p>
+          <span class="text-blue-400 text-sm font-semibold">@tvmathshub →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-blue-600 font-semibold">INVEST IN YOUR FUTURE</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-2">Simple, Transparent <span class="gradient-text">Pricing</span></h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Trial -->
+        <div class="bg-gray-50 p-8 rounded-2xl border-2 border-gray-200 hover:border-blue-400 transition hover:shadow-xl">
+          <h3 class="text-xl font-bold mb-2">Trial Session</h3>
+          <p class="text-4xl font-bold text-blue-600 mb-4">FREE</p>
+          <ul class="space-y-3 mb-6">
+            <li><i class="fas fa-check text-green-500 mr-2"></i> 30-min consultation</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Assessment & diagnosis</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Custom learning plan</li>
+          </ul>
+          <a href="https://wa.me/256784053068?text=Hello%20TV%20Mathshub%2C%20I%20want%20a%20free%20trial" 
+             class="block text-center bg-blue-600 text-white py-3 rounded-full hover:bg-blue-700 transition">Claim Free Session</a>
+        </div>
+        <!-- Individual -->
+        <div class="bg-blue-50 p-8 rounded-2xl border-2 border-blue-500 shadow-lg hover:shadow-xl transition relative">
+          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-6 py-1 rounded-full text-sm">Popular</div>
+          <h3 class="text-xl font-bold mb-2">1-on-1 Tutoring</h3>
+          <p class="text-4xl font-bold text-blue-600 mb-2">UGX 50K <span class="text-base font-normal text-gray-600">/hr</span></p>
+          <p class="text-sm text-gray-500 mb-4">or USD 15/hr for international</p>
+          <ul class="space-y-3 mb-6">
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Personalized attention</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Flexible scheduling</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Notes & resources included</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i> WhatsApp support</li>
+          </ul>
+          <a href="https://wa.me/256784053068?text=Hello%20TV%20Mathshub%2C%20I%20want%20to%20book%201-on-1%20sessions" 
+             class="block text-center bg-blue-600 text-white py-3 rounded-full hover:bg-blue-700 transition">Book Now</a>
+        </div>
+        <!-- Group -->
+        <div class="bg-gray-50 p-8 rounded-2xl border-2 border-gray-200 hover:border-blue-400 transition hover:shadow-xl">
+          <h3 class="text-xl font-bold mb-2">Group Class</h3>
+          <p class="text-4xl font-bold text-blue-600 mb-2">UGX 25K <span class="text-base font-normal text-gray-600">/hr</span></p>
+          <p class="text-sm text-gray-500 mb-4">For 3-5 students</p>
+          <ul class="space-y-3 mb-6">
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Collaborative learning</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Peer support</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Recorded sessions</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Group discounts</li>
+          </ul>
+          <a href="https://wa.me/256784053068?text=Hello%20TV%20Mathshub%2C%20I%20want%20to%20join%20a%20group%20class" 
+             class="block text-center bg-blue-600 text-white py-3 rounded-full hover:bg-blue-700 transition">Join Group</a>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-20 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-blue-600 font-semibold">STUDENT SUCCESS</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-2">What My Students <span class="gradient-text">Say</span></h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+          <div class="flex text-yellow-400 mb-4">⭐⭐⭐⭐⭐</div>
+          <p class="italic text-gray-700">"TV made calculus so easy to understand. I went from a D to an A in just 3 months!"</p>
+          <div class="mt-4 font-semibold">— Sarah K., A-Level Student</div>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+          <div class="flex text-yellow-400 mb-4">⭐⭐⭐⭐⭐</div>
+          <p class="italic text-gray-700">"The online classes are interactive and well-structured. I finally passed my university math exams!"</p>
+          <div class="mt-4 font-semibold">— John M., University Student</div>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+          <div class="flex text-yellow-400 mb-4">⭐⭐⭐⭐⭐</div>
+          <p class="italic text-gray-700">"Best tutor in Uganda! My daughter's grades improved from C to A in just one term."</p>
+          <div class="mt-4 font-semibold">— Parent, O-Level Student</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 px-4 hero-bg text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to <span class="text-yellow-300">Excel</span> in Mathematics?</h2>
+      <p class="text-xl mb-8">Start your journey to academic excellence today. Book your free consultation session now.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://wa.me/256784053068?text=Hello%20TV%20Mathshub%2C%20I%20want%20to%20start%20my%20journey" 
+           class="bg-yellow-400 text-blue-900 font-bold px-12 py-5 rounded-full hover:bg-yellow-300 transition text-xl">
+          🚀 Start Now
+        </a>
+        <a href="tel:+256784053068" 
+           class="bg-white/10 backdrop-blur-sm border-2 border-white px-12 py-5 rounded-full hover:bg-white/20 transition text-xl">
+          📞 Call Me
+        </a>
+      </div>
+      <p class="mt-6 text-blue-200">No credit card required • Money-back guarantee</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="text-white font-bold text-xl mb-4">TV Mathshub</h4>
+          <p>Empowering Ugandan students in mathematics since 2018.</p>
+          <div class="flex space-x-4 mt-4 text-2xl">
+            <a href="http://www.youtube.com/@TVMATHSHUB" target="_blank" class="hover:text-red-500"><i class="fab fa-youtube"></i></a>
+            <a href="https://t.me/tvmathshub" target="_blank" class="hover:text-blue-400"><i class="fab fa-telegram"></i></a>
+            <a href="https://whatsapp.com/channel/0029VbAciLzCnA7mDRzO4r1b" target="_blank" class="hover:text-green-500"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://m.me/turyomurugyendo.vicent.7" target="_blank" class="hover:text-blue-600"><i class="fab fa-facebook-messenger"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5 class="text-white font-semibold mb-3">Quick Links</h5>
+          <ul class="space-y-2">
+            <li><a href="#subjects" class="hover:text-blue-400">Subjects</a></li>
+            <li><a href="#pricing" class="hover:text-blue-400">Pricing</a></li>
+            <li><a href="#resources" class="hover:text-blue-400">Resources</a></li>
+            <li><a href="#community" class="hover:text-blue-400">Community</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-semibold mb-3">Contact</h5>
+          <p><i class="fab fa-whatsapp text-green-400 mr-2"></i> +256 784 053 068</p>
+          <p><i class="fas fa-envelope text-blue-400 mr-2"></i> tvmathshub@gmail.com</p>
+        </div>
+        <div>
+          <h5 class="text-white font-semibold mb-3">Quick Access</h5>
+          <a href="https://chat.whatsapp.com/CtpwI6QnQSf9YafxtlQbQX?s=cl&p=a&mlu=3" target="_blank" class="block hover:text-green-400">📚 A-Level Group</a>
+          <a href="https://whatsapp.com/channel/0029VbAciLzCnA7mDRzO4r1b" target="_blank" class="block hover:text-green-400">📢 WhatsApp Channel</a>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+        <p>© 2026 TV Mathshub • Made with ❤️ in Uganda</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Smooth scroll for marquee -->
+  <style>
+    .animate-marquee {
+      display: flex;
+      animation: marquee 20s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</body>
+</html>
