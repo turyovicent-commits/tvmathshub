@@ -110,161 +110,291 @@
   <!-- ============================================================ -->
   <!-- 4. ABOUT ME & EXPERIENCE SECTION (NEW - Placed here)         -->
   <!-- ============================================================ -->
-  <section id="about" class="py-20 px-4 bg-white">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <span class="text-blue-600 font-semibold">ABOUT ME</span>
-        <h2 class="text-4xl md:text-5xl font-bold mt-2">Your Trusted Mathematics <span class="gradient-text">Expert</span></h2>
-        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Over 8 years of teaching experience across Uganda's top institutions</p>
+  <!-- ============================================================ -->
+<!-- ABOUT ME - PREMIUM REDESIGN                                   -->
+<!-- ============================================================ -->
+<section id="about" class="py-20 px-4 bg-white relative overflow-hidden">
+  
+  <!-- Background Decoration -->
+  <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+  <div class="absolute bottom-0 left-0 w-80 h-80 bg-purple-500/5 rounded-full translate-y-1/2 -translate-x-1/3 pointer-events-none"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-400/3 rounded-full pointer-events-none"></div>
+  
+  <div class="max-w-7xl mx-auto relative z-10">
+    
+    <!-- Section Header with Animation -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-4 py-1.5 rounded-full mb-4">
+        <span class="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
+        <span class="text-blue-600 font-semibold text-sm tracking-wider">ABOUT ME</span>
       </div>
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-3">
+        Your Trusted Mathematics 
+        <span class="gradient-text">Expert</span>
+      </h2>
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <span class="w-12 h-0.5 bg-gradient-to-r from-transparent to-blue-500"></span>
+        <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+        <span class="w-12 h-0.5 bg-gradient-to-l from-transparent to-blue-500"></span>
+      </div>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Over <span class="font-bold text-blue-600">8 years</span> of teaching experience across Uganda's top institutions
+      </p>
+    </div>
 
-      <div class="grid md:grid-cols-2 gap-12 items-start">
-        <!-- Left Column: Personal Info & Bio -->
-        <div>
-          <div class="flex items-center gap-4 mb-6">
-            <div class="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center text-4xl text-blue-600 border-4 border-blue-200 overflow-hidden">
-              <!-- Replace with your actual photo -->
-              <img src="profile.png" 
-     alt="Turyomurugyendo Vicent" class="w-full h-full object-cover" />
+    <!-- Main Grid -->
+    <div class="grid md:grid-cols-5 gap-8 items-stretch">
+      
+      <!-- ========================================================== -->
+      <!-- LEFT COLUMN (3/5) - Personal Info & Bio                    -->
+      <!-- ========================================================== -->
+      <div class="md:col-span-3 flex flex-col">
+        
+        <!-- Profile Card -->
+        <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100/50">
+          
+          <!-- Profile Header -->
+          <div class="flex items-center gap-5 mb-6">
+            <div class="relative">
+              <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 p-1">
+                <div class="w-full h-full rounded-full bg-white overflow-hidden">
+                  <img src="profile.png" alt="Turyomurugyendo Vicent" class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <!-- Online Status Badge -->
+              <div class="absolute -bottom-1 -right-1 bg-green-500 border-2 border-white rounded-full p-1.5">
+                <span class="w-2 h-2 bg-green-400 rounded-full block animate-pulse"></span>
+              </div>
             </div>
             <div>
-              <h3 class="text-2xl font-bold text-gray-800">Turyomurugyendo Vicent</h3>
-              <p class="text-blue-600 font-semibold">(TV) - Mathematics Specialist</p>
+              <h3 class="text-xl md:text-2xl font-bold text-gray-800">Turyomurugyendo Vicent</h3>
+              <p class="text-blue-600 font-semibold text-sm md:text-base">(TV) - Mathematics Specialist</p>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-yellow-400 text-sm">⭐</span>
+                <span class="text-yellow-400 text-sm">⭐</span>
+                <span class="text-yellow-400 text-sm">⭐</span>
+                <span class="text-yellow-400 text-sm">⭐</span>
+                <span class="text-yellow-400 text-sm">⭐</span>
+                <span class="text-xs text-gray-500 ml-1">(4.9/5)</span>
+              </div>
             </div>
           </div>
-
-          <div class="text-gray-600 space-y-4">
-            <p>
+          
+          <!-- Bio Text -->
+          <div class="text-gray-600 space-y-4 text-base leading-relaxed">
+            <p class="relative pl-4 border-l-4 border-blue-500">
               I am a passionate mathematics educator dedicated to transforming how students understand 
               and appreciate mathematics. With over <strong class="text-blue-600">8 years of teaching experience</strong> 
               across Uganda's leading institutions, I've helped <strong class="text-blue-600">500+ students</strong> 
               achieve their academic goals.
             </p>
             <p>
-              My teaching philosophy is simple: <strong>every student can excel in mathematics</strong> with 
+              My teaching philosophy is simple: <strong class="text-gray-800">every student can excel in mathematics</strong> with 
               the right guidance, patience, and personalized approach. I break down complex concepts 
               into simple, understandable steps.
             </p>
           </div>
-
-          <!-- Quick Stats -->
-         <!-- Why Choose TV Mathshub - Premium Design -->
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-  
-  <!-- Card 1: Personalized Learning -->
-  <div class="group relative bg-white rounded-2xl p-5 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-default overflow-hidden">
-    <!-- Gradient Border Effect -->
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-    <!-- Content -->
-    <div class="relative z-10">
-      <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-3xl mb-4 shadow-lg shadow-blue-500/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-        🎯
-      </div>
-      <h4 class="text-sm font-bold text-gray-800 group-hover:text-white transition-colors duration-300">Personalized Learning</h4>
-      <p class="text-xs text-gray-500 group-hover:text-blue-100 transition-colors duration-300 mt-1">Tailored to YOUR pace &amp; style</p>
-      <div class="mt-3 w-full h-0.5 bg-gradient-to-r from-blue-500 to-transparent group-hover:from-white group-hover:to-transparent transition-all duration-300"></div>
-    </div>
-  </div>
-  
-  <!-- Card 2: Flexible Scheduling -->
-  <div class="group relative bg-white rounded-2xl p-5 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-default overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-green-500 to-green-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-    <div class="relative z-10">
-      <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-3xl mb-4 shadow-lg shadow-green-500/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-        💻
-      </div>
-      <h4 class="text-sm font-bold text-gray-800 group-hover:text-white transition-colors duration-300">Flexible Scheduling</h4>
-      <p class="text-xs text-gray-500 group-hover:text-green-100 transition-colors duration-300 mt-1">Learn anytime, anywhere</p>
-      <div class="mt-3 w-full h-0.5 bg-gradient-to-r from-green-500 to-transparent group-hover:from-white group-hover:to-transparent transition-all duration-300"></div>
-    </div>
-  </div>
-  
-  <!-- Card 3: Proven Resources -->
-  <div class="group relative bg-white rounded-2xl p-5 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-default overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-    <div class="relative z-10">
-      <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-3xl mb-4 shadow-lg shadow-purple-500/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-        📚
-      </div>
-      <h4 class="text-sm font-bold text-gray-800 group-hover:text-white transition-colors duration-300">Proven Resources</h4>
-      <p class="text-xs text-gray-500 group-hover:text-purple-100 transition-colors duration-300 mt-1">100+ curated materials</p>
-      <div class="mt-3 w-full h-0.5 bg-gradient-to-r from-purple-500 to-transparent group-hover:from-white group-hover:to-transparent transition-all duration-300"></div>
-    </div>
-  </div>
-  
-  <!-- Card 4: Exam Expertise -->
-  <div class="group relative bg-white rounded-2xl p-5 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-default overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-    <div class="relative z-10">
-      <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-3xl mb-4 shadow-lg shadow-orange-500/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-        🏆
-      </div>
-      <h4 class="text-sm font-bold text-gray-800 group-hover:text-white transition-colors duration-300">Exam Expertise</h4>
-      <p class="text-xs text-gray-500 group-hover:text-orange-100 transition-colors duration-300 mt-1">UNEB Examiner insights</p>
-      <div class="mt-3 w-full h-0.5 bg-gradient-to-r from-orange-500 to-transparent group-hover:from-white group-hover:to-transparent transition-all duration-300"></div>
-    </div>
-  </div>
-  
-</div>
-
-        <!-- Right Column: Qualifications & Experience -->
-        <div class="space-y-6">
-          <!-- Qualifications -->
-          <div class="bg-gray-50 p-6 rounded-2xl border-l-4 border-blue-600">
-            <h4 class="font-bold text-lg mb-4 flex items-center gap-2">
-              <i class="fas fa-graduation-cap text-blue-600"></i> Academic Qualifications
-            </h4>
-            <div class="space-y-3">
-              <div class="bg-white p-4 rounded-xl shadow-sm">
-                <p class="font-semibold text-blue-700">Master of Science in Mathematics</p>
-                <p class="text-gray-600 text-sm">Marwadi University, India</p>
-                <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full mt-1">First Class with Distinction</span>
+          
+          <!-- Trust Badges -->
+          <div class="flex flex-wrap items-center gap-4 mt-6 pt-6 border-t border-gray-200">
+            <div class="flex items-center gap-2 text-sm text-gray-600">
+              <span class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600">✓</span>
+              <span>98% Success Rate</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-gray-600">
+              <span class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">🏆</span>
+              <span>Top Rated Tutor</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-gray-600">
+              <span class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">📚</span>
+              <span>100+ Resources</span>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Why Choose Me - Premium Cards -->
+        <div class="mt-6">
+          <h4 class="text-sm font-bold text-gray-700 uppercase tracking-wider mb-4 flex items-center gap-2">
+            <span class="w-8 h-0.5 bg-blue-500"></span>
+            Why Choose Me
+          </h4>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            
+            <!-- Card 1 -->
+            <div class="group relative bg-white rounded-2xl p-4 text-center shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-default overflow-hidden border border-gray-100">
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+              <div class="relative z-10">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-2xl mb-2 shadow-lg shadow-blue-500/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  🎯
+                </div>
+                <h4 class="text-xs font-bold text-gray-800 group-hover:text-white transition-colors duration-300">Personalized</h4>
+                <p class="text-[10px] text-gray-500 group-hover:text-blue-100 transition-colors duration-300">Tailored to you</p>
               </div>
-              <div class="bg-white p-4 rounded-xl shadow-sm">
-                <p class="font-semibold text-blue-700">Bachelor of Science in Education</p>
-                <p class="text-gray-600 text-sm">Physics & Mathematics • Gulu University, Uganda</p>
-                <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full mt-1">First Class</span>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="group relative bg-white rounded-2xl p-4 text-center shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-default overflow-hidden border border-gray-100">
+              <div class="absolute inset-0 bg-gradient-to-br from-green-500 to-green-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+              <div class="relative z-10">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-2xl mb-2 shadow-lg shadow-green-500/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  💻
+                </div>
+                <h4 class="text-xs font-bold text-gray-800 group-hover:text-white transition-colors duration-300">Flexible</h4>
+                <p class="text-[10px] text-gray-500 group-hover:text-green-100 transition-colors duration-300">Anytime, anywhere</p>
+              </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="group relative bg-white rounded-2xl p-4 text-center shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-default overflow-hidden border border-gray-100">
+              <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+              <div class="relative z-10">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-2xl mb-2 shadow-lg shadow-purple-500/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  📚
+                </div>
+                <h4 class="text-xs font-bold text-gray-800 group-hover:text-white transition-colors duration-300">Proven</h4>
+                <p class="text-[10px] text-gray-500 group-hover:text-purple-100 transition-colors duration-300">100+ resources</p>
+              </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="group relative bg-white rounded-2xl p-4 text-center shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-default overflow-hidden border border-gray-100">
+              <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+              <div class="relative z-10">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-2xl mb-2 shadow-lg shadow-orange-500/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  🏆
+                </div>
+                <h4 class="text-xs font-bold text-gray-800 group-hover:text-white transition-colors duration-300">Expert</h4>
+                <p class="text-[10px] text-gray-500 group-hover:text-orange-100 transition-colors duration-300">UNEB Examiner</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- CTA Button -->
+        <div class="mt-6 pt-6 border-t border-gray-200">
+          <a href="https://wa.me/256784053068?text=Hello%20TV%20Mathshub%2C%20I%20want%20to%20book%20a%20free%20consultation" 
+             class="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold px-8 py-4 rounded-2xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 text-lg shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 overflow-hidden">
+            <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+            <span class="relative flex items-center gap-3">
+              🎯 Book a Session with Me
+              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </span>
+          </a>
+          <p class="text-sm text-gray-500 mt-3 text-center">
+            <span class="inline-flex items-center gap-1">
+              <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+              Join 500+ students who've excelled under my guidance
+            </span>
+          </p>
+        </div>
+        
+      </div>
+      
+      <!-- ========================================================== -->
+      <!-- RIGHT COLUMN (2/5) - Qualifications & Experience          -->
+      <!-- ========================================================== -->
+      <div class="md:col-span-2 flex flex-col space-y-6">
+        
+        <!-- Qualifications Card -->
+        <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-6 shadow-xl border border-gray-100/50 group hover:shadow-2xl transition-all duration-300">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white text-xl shadow-lg shadow-blue-500/30">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800">Academic Qualifications</h4>
+              <p class="text-xs text-gray-500">Top-tier education credentials</p>
+            </div>
+          </div>
+          
+          <div class="space-y-4">
+            <!-- MSc -->
+            <div class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-blue-500">
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="font-semibold text-blue-700 text-sm">Master of Science in Mathematics</p>
+                  <p class="text-gray-600 text-xs">Marwadi University, India</p>
+                </div>
+                <span class="bg-gradient-to-r from-green-500 to-green-600 text-white text-[10px] font-bold px-3 py-1 rounded-full flex-shrink-0 ml-2">★ Distinction</span>
+              </div>
+            </div>
+            
+            <!-- BSc -->
+            <div class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-purple-500">
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="font-semibold text-purple-700 text-sm">Bachelor of Science in Education</p>
+                  <p class="text-gray-600 text-xs">Physics &amp; Mathematics • Gulu University</p>
+                </div>
+                <span class="bg-gradient-to-r from-green-500 to-green-600 text-white text-[10px] font-bold px-3 py-1 rounded-full flex-shrink-0 ml-2">★ First Class</span>
               </div>
             </div>
           </div>
-
-         
-         <!-- Teaching Experience / Expertise -->
-<div class="bg-gray-50 p-6 rounded-2xl border-l-4 border-green-600">
-  <h4 class="font-bold text-lg mb-4 flex items-center gap-2">
-    <i class="fas fa-chalkboard-teacher text-green-600"></i> Teaching Experience
-  </h4>
-  <div class="space-y-4 text-gray-600">
-    <p>
-      With <strong>over 8 years of teaching experience</strong>, I have successfully taught students from diverse backgrounds across different curricula worldwide.
-    </p>
-    <p>
-      I specialize in making complex mathematical concepts simple and relatable for both <strong>Ugandan students</strong> (UNEB curriculum) and <strong>international students</strong>.
-    </p>
-    
-    <div class="grid grid-cols-2 gap-4 mt-6">
-      <div class="bg-white p-4 rounded-xl text-center">
-        <span class="text-3xl font-bold text-green-600">500+</span>
-        <p class="text-sm text-gray-600">Students Worldwide</p>
+        </div>
+        
+        <!-- Experience Card -->
+        <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-6 shadow-xl border border-gray-100/50 flex-1 group hover:shadow-2xl transition-all duration-300">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white text-xl shadow-lg shadow-green-500/30">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800">Teaching Experience</h4>
+              <p class="text-xs text-gray-500">8+ years of excellence</p>
+            </div>
+          </div>
+          
+          <div class="space-y-3 text-gray-600 text-sm">
+            <p>
+              Successfully taught students from diverse backgrounds across <strong class="text-gray-800">different curricula worldwide</strong>.
+            </p>
+            <p>
+              Specializing in <strong class="text-gray-800">UNEB curriculum</strong> (Uganda) and <strong class="text-gray-800">international standards</strong>.
+            </p>
+          </div>
+          
+          <!-- Mini Stats -->
+          <div class="grid grid-cols-2 gap-3 mt-5">
+            <div class="bg-gradient-to-br from-green-50 to-green-100 p-3 rounded-xl text-center border border-green-200">
+              <span class="text-2xl font-bold text-green-600">500+</span>
+              <p class="text-[10px] text-gray-600 font-medium">Students Worldwide</p>
+            </div>
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-3 rounded-xl text-center border border-blue-200">
+              <span class="text-2xl font-bold text-blue-600">8+</span>
+              <p class="text-[10px] text-gray-600 font-medium">Years Experience</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Trust Signal Badge -->
+        <div class="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-4 text-center">
+          <div class="flex items-center justify-center gap-4 text-sm">
+            <span class="flex items-center gap-1.5">
+              <span class="text-yellow-500">⭐</span>
+              <span class="font-bold text-gray-700">4.9/5</span>
+            </span>
+            <span class="w-px h-6 bg-amber-200"></span>
+            <span class="flex items-center gap-1.5">
+              <span class="text-green-500">✓</span>
+              <span class="font-bold text-gray-700">98% Success</span>
+            </span>
+            <span class="w-px h-6 bg-amber-200"></span>
+            <span class="flex items-center gap-1.5">
+              <span class="text-blue-500">🏆</span>
+              <span class="font-bold text-gray-700">Top Tutor</span>
+            </span>
+          </div>
+        </div>
+        
       </div>
-      <div class="bg-white p-4 rounded-xl text-center">
-        <span class="text-3xl font-bold text-green-600">8+</span>
-        <p class="text-sm text-gray-600">Years Experience</p>
-      </div>
+      
     </div>
   </div>
-</div>
-      <!-- Call to Action -->
-      <div class="text-center mt-12">
-        <a href="https://wa.me/256784053068?text=Hello%20TV%20Mathshub%2C%20I%20want%20to%20learn%20from%20you" 
-           class="inline-block bg-blue-600 text-white font-bold px-10 py-4 rounded-full hover:bg-blue-700 transition text-lg">
-          🎯 Book a Session with Me
-        </a>
-        <p class="text-sm text-gray-500 mt-3">Join 500+ students who've excelled under my guidance</p>
-      </div>
-    </div>
-  </section>
-
+</section>
   <!-- ============================================================ -->
   <!-- 5. ACHIEVEMENTS SECTION (NEW - Placed here)                  -->
   <!-- ============================================================ -->
