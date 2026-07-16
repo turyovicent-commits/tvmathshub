@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You for Your Purchase! - TV Math Hub</title>
+    <style>
+        /* --- Professional Styling --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #1a1a2e;
+            background: #f0f2f5;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 820px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            padding: 45px 50px;
+            margin: 20px auto;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #f5c842;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 2.4rem;
+            color: #1a237e;
+            margin-bottom: 5px;
+        }
+        .header h1 span {
+            color: #f5c842;
+        }
+        .header p {
+            color: #555;
+            font-size: 1.1rem;
+        }
+        .badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        h2 {
+            color: #1a237e;
+            font-size: 1.5rem;
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e8edf5;
+        }
+        .step-box {
+            background: #f7f9fc;
+            padding: 16px 22px;
+            border-radius: 10px;
+            margin: 12px 0;
+            border-left: 5px solid #1a237e;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .step-number {
+            background: #1a237e;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .step-content strong {
+            color: #1a237e;
+        }
+        .payment-box {
+            background: linear-gradient(135deg, #e8f0fe 0%, #d4e0f9 100%);
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin: 20px 0;
+            text-align: center;
+            border: 2px dashed #1a237e;
+        }
+        .payment-box .label {
+            font-weight: 600;
+            color: #333;
+            font-size: 1rem;
+        }
+        .phone-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1a237e;
+            background: white;
+            padding: 8px 24px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 8px 0;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .phone-number small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #555;
+        }
+        .network-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+        .network-tag {
+            background: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #1a237e;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+        }
+        .network-tag.mtn { color: #ffb300; }
+        .network-tag.airtel { color: #e53935; }
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin: 25px 0 15px 0;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+        }
+        .btn-whatsapp:hover {
+            background: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+        }
+        .btn-email {
+            background: #1a237e;
+            color: white;
+        }
+        .btn-email:hover {
+            background: #0d1457;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 35, 126, 0.35);
+        }
+        .btn-secondary {
+            background: #e8edf5;
+            color: #1a237e;
+        }
+        .btn-secondary:hover {
+            background: #d5dce8;
+            transform: translateY(-2px);
+        }
+        .info-box {
+            padding: 18px 24px;
+            border-radius: 10px;
+            margin: 18px 0;
+        }
+        .info-box.time {
+            background: #fff8e1;
+            border-left: 5px solid #ffa000;
+        }
+        .info-box.refund {
+            background: #e3f2fd;
+            border-left: 5px solid #1976d2;
+        }
+        .info-box.important {
+            background: #fce4ec;
+            border-left: 5px solid #c62828;
+        }
+        .info-box.welcome {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-left: 5px solid #2e7d32;
+            text-align: center;
+            font-size: 1.05rem;
+        }
+        .info-box.welcome strong {
+            color: #1a237e;
+        }
+        .product-summary {
+            background: #f7f9fc;
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin: 15px 0;
+            border: 1px solid #e8edf5;
+        }
+        .product-summary table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+        .product-summary th {
+            text-align: left;
+            padding: 8px 10px 8px 0;
+            color: #1a237e;
+            border-bottom: 2px solid #e8edf5;
+        }
+        .product-summary td {
+            padding: 8px 10px 8px 0;
+            border-bottom: 1px solid #f0f2f5;
+        }
+        .product-summary tr:last-child td {
+            border-bottom: none;
+        }
+        .price-tag {
+            font-weight: 700;
+            color: #1a237e;
+            white-space: nowrap;
+        }
+        .back-home {
+            display: inline-block;
+            margin-top: 30px;
+            color: #1a237e;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 20px;
+            border: 2px solid #1a237e;
+            border-radius: 30px;
+            transition: all 0.2s ease;
+        }
+        .back-home:hover {
+            background: #1a237e;
+            color: white;
+        }
+        .footer-note {
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid #e8edf5;
+            font-size: 0.9rem;
+            color: #777;
+            text-align: center;
+        }
+        .footer-note .stars {
+            color: #f5c842;
+            letter-spacing: 2px;
+        }
+        @media (max-width: 640px) {
+            .container { padding: 25px 20px; }
+            .header h1 { font-size: 1.7rem; }
+            .phone-number { font-size: 1.4rem; padding: 6px 16px; }
+            .step-box { flex-direction: column; align-items: stretch; gap: 6px; }
+            .action-buttons { flex-direction: column; align-items: stretch; }
+            .btn { justify-content: center; }
+            .product-summary table { font-size: 0.85rem; }
+            .product-summary td, .product-summary th { padding: 6px 8px 6px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ===== HEADER ===== -->
+    <div class="header">
+        <h1>🎉 Thank You, <span>Student!</span></h1>
+        <p>You're one step away from getting your math materials.</p>
+        <span class="badge">⭐ Trusted by 500+ Students</span>
+    </div>
+
+    <!-- ===== WELCOME MESSAGE ===== -->
+    <div class="info-box welcome">
+        <p style="margin: 0;">
+            👋 <strong>Welcome to TV Math Hub!</strong> I'm Turyomurugyendo Vicent, Uganda's Top Online Mathematics Tutor. 
+            I'm excited to help you master mathematics with these high-quality materials.
+        </p>
+    </div>
+
+    <!-- ===== WHAT YOU ORDERED ===== -->
+    <h2>📚 What You're Purchasing</h2>
+    <div class="product-summary" id="product-summary">
+        <p style="margin-bottom: 8px; color: #555;">
+            <strong>Your selected item:</strong> 
+            <span id="selected-product" style="color: #1a237e;">[Product will appear here]</span>
+        </p>
+        <p style="margin: 0; font-size: 0.9rem; color: #777;">
+            Please make sure the amount you send matches the price of this item.
+        </p>
+    </div>
+
+    <!-- ===== STEP 1: PAYMENT ===== -->
+    <h2>📝 Step 1: Send Payment</h2>
+    <p style="color: #555; margin-bottom: 12px;">
+        Send the exact amount via <strong>MTN Mobile Money</strong> or <strong>Airtel Money</strong> to:
+    </p>
+
+    <div class="payment-box">
+        <div class="label">📱 Send To:</div>
+        <div class="phone-number">
+            0780 530 68 <small>(MTN)</small>
+        </div>
+        <div class="phone-number" style="font-size: 1.6rem; margin-top: 0;">
+            0758 569 409 <small>(Airtel)</small>
+        </div>
+        <div class="network-tags">
+            <span class="network-tag mtn">🟡 MTN Mobile Money</span>
+            <span class="network-tag airtel">🔴 Airtel Money</span>
+        </div>
+        <p style="margin: 8px 0 0 0; color: #333; font-weight: 500;">
+            Account Name: <strong>TURYOMURUGYENDO VICENT</strong>
+        </p>
+    </div>
+
+    <!-- ===== STEP 2: SCREENSHOT ===== -->
+    <h2>📸 Step 2: Take a Screenshot</h2>
+    <div class="step-box">
+        <div class="step-number">2</div>
+        <div class="step-content">
+            <strong>Take a screenshot</strong> of your payment confirmation or write down your <strong>transaction ID</strong>.
+            <div style="margin-top: 6px; font-size: 0.9rem; color: #555;">
+                💡 This proves you've sent the payment and helps me verify it quickly.
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== STEP 3: CONTACT ME ===== -->
+    <h2>💬 Step 3: Send Confirmation</h2>
+    <div class="step-box">
+        <div class="step-number">3</div>
+        <div class="step-content">
+            <strong>Send the screenshot or transaction ID</strong> along with the <strong>name of the item</strong> you purchased to me via:
+        </div>
+    </div>
+
+    <div class="action-buttons">
+        <a href="https://wa.me/25678053068?text=Hello%20TV%2C%20I%20just%20paid%20for%20%5BItem%20Name%5D.%20Here%20is%20my%20payment%20screenshot.%20My%20transaction%20ID%20is%20%5BID%5D." 
+           class="btn btn-whatsapp" 
+           target="_blank">
+           💬 WhatsApp Me
+        </a>
+        <a href="mailto:tvmathshub@gmail.com?subject=PDF%20Purchase%3A%20%5BItem%20Name%5D&body=Hello%20TV%2C%0A%0AI%20just%20paid%20for%20%5BItem%20Name%5D.%0A%0APayment%20Details%3A%0A-%20Network%3A%20%5BMTN%20or%20Airtel%5D%0A-%20Transaction%20ID%3A%20%5BYour%20ID%5D%0A-%20Amount%3A%20UGX%20%5BAmount%5D%0A%0APlease%20find%20my%20payment%20screenshot%20attached.%0A%0AThank%20you!%0A%0ARegards%2C%0A%5BYour%20Name%5D" 
+           class="btn btn-email">
+           📧 Email Me
+        </a>
+    </div>
+
+    <p style="text-align: center; font-size: 0.9rem; color: #777; margin: 5px 0 20px 0;">
+        Or call me directly on <strong>0780 530 68</strong> / <strong>0758 569 409</strong>
+    </p>
+
+    <!-- ===== DELIVERY TIME ===== -->
+    <div class="info-box time">
+        <p style="margin: 0; font-weight: 600; color: #e65100;">⏳ Delivery Time</p>
+        <p style="margin: 5px 0 0 0;">
+            I will send your PDF within <strong>2 hours</strong> of confirming your payment. 
+            You'll receive it via WhatsApp or email, depending on how you contacted me.
+        </p>
+    </div>
+
+    <!-- ===== REFUND POLICY ===== -->
+    <div class="info-box refund">
+        <p style="margin: 0; font-weight: 600; color: #0d47a1;">🔄 Refund Policy</p>
+        <p style="margin: 5px 0 0 0;">
+            You can get a <strong>full refund</strong> if you don't receive your PDF within <strong>24 hours</strong> of payment. 
+            Just contact me with your payment details and I'll refund you immediately.
+        </p>
+    </div>
+
+    <!-- ===== IMPORTANT NOTE ===== -->
+    <div class="info-box important">
+        <p style="margin: 0; font-weight: 600; color: #b71c1c;">⚠️ Important</p>
+        <p style="margin: 5px 0 0 0;">
+            Please only contact me <strong>after</strong> you've confirmed the money has left your account. 
+            I will verify the payment on my side before sending your PDF to prevent any issues.
+        </p>
+    </div>
+
+    <!-- ===== BACK HOME ===== -->
+    <div style="text-align: center;">
+        <a href="https://turyovicent-commits.github.io/tvmathshub/" class="back-home">← Back to TV Math Hub Home</a>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <div class="footer-note">
+        <p>
+            <span class="stars">⭐⭐⭐⭐⭐</span> 4.9/5 Rating &bull; 🎯 500+ Students &bull; 🏆 Top Rated Tutor &bull; 🌍 10+ Countries
+        </p>
+        <p style="margin-top: 5px;">
+            📧 tvmathshub@gmail.com &bull; 📱 0780 530 68 / 0758 569 409
+        </p>
+    </div>
+
+</div>
+
+<!-- ===== JAVASCRIPT: Detect Which Product Was Selected ===== -->
+<script>
+    // Get the product name from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const product = urlParams.get('product');
+
+    // Map product codes to friendly names and prices
+    const products = {
+        'alevel_seminar_p1': {
+            name: 'A-Level Principal Mathematics Seminar Items - Paper 1',
+            price: 'UGX 10,000'
+        },
+        'alevel_seminar_p2': {
+            name: 'A-Level Principal Mathematics Seminar Items - Paper 2',
+            price: 'UGX 10,000'
+        },
+        'alevel_seminar_both': {
+            name: 'A-Level Principal Mathematics Seminar Items - Both Papers',
+            price: 'UGX 20,000'
+        },
+        'acieteka_joint': {
+            name: 'Acieteka Joint Mock Paper 1 - Items & Responses',
+            price: 'UGX 5,000'
+        },
+        'alevel_mock_2026': {
+            name: 'A-Level Principal Paper 1 Maths Mock 2026 - Complete Paper & Solutions',
+            price: 'UGX 5,000'
+        },
+        's5_midterm_2': {
+            name: 'Senior Five Mid Term 2 2026 - Complete Paper & Responses',
+            price: 'UGX 3,000'
+        },
+        // Add more products as needed
+        'default': {
+            name: 'your selected item',
+            price: 'the correct amount'
+        }
+    };
+
+    // Get the product details or use default
+    const selected = products[product] || products['default'];
+
+    // Update the page with the product name
+    const productSpan = document.getElementById('selected-product');
+    if (productSpan) {
+        productSpan.textContent = selected.name + ' (' + selected.price + ')';
+    }
+
+    // Also update the WhatsApp and Email links to include the product name
+    const whatsappBtn = document.querySelector('.btn-whatsapp');
+    const emailBtn = document.querySelector('.btn-email');
+
+    if (whatsappBtn && product && product !== 'default') {
+        const productName = encodeURIComponent(selected.name);
+        whatsappBtn.href = `https://wa.me/25678053068?text=Hello%20TV%2C%20I%20just%20paid%20for%20${productName}%20(${selected.price}).%20Here%20is%20my%20payment%20screenshot.%20My%20transaction%20ID%20is%20%5BID%5D.`;
+    }
+
+    if (emailBtn && product && product !== 'default') {
+        const productName = encodeURIComponent(selected.name);
+        emailBtn.href = `mailto:tvmathshub@gmail.com?subject=PDF%20Purchase%3A%20${productName}&body=Hello%20TV%2C%0A%0AI%20just%20paid%20for%20${productName}%20(${selected.price}).%0A%0APayment%20Details%3A%0A-%20Network%3A%20%5BMTN%20or%20Airtel%5D%0A-%20Transaction%20ID%3A%20%5BYour%20ID%5D%0A-%20Amount%3A%20${selected.price}%0A%0APlease%20find%20my%20payment%20screenshot%20attached.%0A%0AThank%20you!%0A%0ARegards%2C%0A%5BYour%20Name%5D`;
+    }
+</script>
+
+</body>
+</html>
