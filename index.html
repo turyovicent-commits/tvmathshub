@@ -20,6 +20,119 @@
     .channel-btn:hover { transform: scale(1.05); }
     .aspect-w-16 { position: relative; padding-bottom: 56.25%; }
     .aspect-w-16 iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+    /* Styles for Mock Papers Section */
+.mock-papers-section .file-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  border: 1px solid #eef2f6;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.mock-papers-section .file-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border-color: #cbd5e1;
+}
+
+.mock-papers-section .file-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.mock-papers-section .file-name {
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
+  word-break: break-word;
+  flex-grow: 1;
+}
+
+.mock-papers-section .file-size {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 0.75rem;
+}
+
+/* THE "NEW" BADGE - LIGHTING EFFECT */
+.mock-papers-section .new-badge {
+  background: #dc2626;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  align-self: flex-start;
+  animation: pulse-glow 2s infinite;
+  box-shadow: 0 0 15px rgba(220, 38, 38, 0.4);
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 5px rgba(220, 38, 38, 0.4); }
+  50% { box-shadow: 0 0 20px rgba(220, 38, 38, 0.7); }
+  100% { box-shadow: 0 0 5px rgba(220, 38, 38, 0.4); }
+}
+
+.mock-papers-section .include-btn {
+  background: #f1f5f9;
+  color: #1e293b;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.mock-papers-section .include-btn:hover {
+  background: #e2e8f0;
+}
+
+.mock-papers-section .include-btn.included {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.mock-papers-section .include-btn.included:hover {
+  background: #bbf7d0;
+}
+
+/* Selected file tag styles */
+#selected-files-list .file-tag {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 0.3rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#selected-files-list .remove-tag {
+  cursor: pointer;
+  font-weight: 700;
+  color: #ef4444;
+}
   </style>
 </head>
 <body>
@@ -888,6 +1001,42 @@
   </div>
 </section>
 
+<!-- ===== START OF A-LEVEL MOCK PAPERS 2026 SECTION ===== -->
+<section id="mock-papers" class="mock-papers-section" style="background: #f8fafc; padding: 4rem 1rem;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto;">
+    <!-- Header -->
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
+      <div>
+        <h2 style="font-size: 2rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem;">📚 A-Level Mock Papers 2026</h2>
+        <p style="color: #475569; font-size: 1.1rem;">Prepare for your exams with the latest mock papers from various Ugandan institutions. Click <strong>"Include"</strong> to build your custom selection.</p>
+      </div>
+      <a href="https://drive.google.com/drive/folders/13Bs4hNGUSznjRwYbsZOLyzqIf2n5P67c?usp=sharing" target="_blank" rel="noopener noreferrer" style="background: #1e293b; color: white; padding: 0.75rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: background 0.3s;">
+        📂 View All on Google Drive
+      </a>
+    </div>
+
+    <!-- Selected Files Panel -->
+    <div id="selected-files-panel" style="background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 2rem; border: 1px solid #e2e8f0; display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <h3 style="font-size: 1.25rem; font-weight: 600; color: #0f172a;">📋 My Selection (<span id="selection-count">0</span> files)</h3>
+        <div style="display: flex; gap: 0.75rem;">
+          <button onclick="clearSelection()" style="background: #fee2e2; color: #dc2626; border: none; padding: 0.4rem 1rem; border-radius: 30px; font-weight: 500; cursor: pointer;">Clear All</button>
+          <button id="download-selection-btn" style="background: #2563eb; color: white; border: none; padding: 0.4rem 1.5rem; border-radius: 30px; font-weight: 600; cursor: pointer;">⬇️ Download List</button>
+        </div>
+      </div>
+      <div id="selected-files-list" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+        <!-- Selected file tags will appear here -->
+      </div>
+    </div>
+
+    <!-- File Grid -->
+    <div id="mock-file-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem;">
+      <!-- Files will be loaded here by JavaScript -->
+    </div>
+  </div>
+</section>
+<!-- ===== END OF A-LEVEL MOCK PAPERS 2026 SECTION ===== -->
+  
 
   <!-- ===== STORE SECTION ===== -->
 <section style="background: #f8f9fa; padding: 40px 20px; border-radius: 16px; margin: 40px 0;">
@@ -1327,5 +1476,154 @@
       100% { transform: translateX(-100%); }
     }
   </style>
+
+<script>
+  (function() {
+    // --- DATA: List of files from your Google Drive ---
+    const filesData = [
+      { name: "NAMIREMBE MTC 2 MOCK 2026.pdf", size: "733 KB", date: "2026-07-31" },
+      { name: "WAKISHA JOINT MOCK EXAMINATION UACE PURE MATHEMATICS PAPER 1 JULY AUGUST.pdf", size: "7.5 MB", date: "2026-07-31" },
+      { name: "WAKISHA JOINT MOCK EXAMINATION UACE PURE MATHEMATICS PAPER 1 JULY AUGUST (1).pdf", size: "7.5 MB", date: "2026-07-31" },
+      { name: "2026 Utes Mathematics--- 20-Jul-2026 21-00-43.pdf", size: "696 KB", date: "2026-07-28" },
+      { name: "asshu kasese.pdf", size: "3.1 MB", date: "2026-07-28" },
+      { name: "COUHEIA PAPER ONE.pdf", size: "5 MB", date: "2026-07-28" },
+      { name: "COUHERIA MOCK Math 1 pdf_260713_212427 (1).pdf", size: "2.5 MB", date: "2026-07-28" },
+      { name: "JINJA EXAMINATION BOARD MOCK PAPER 1.pdf", size: "190 KB", date: "2026-07-28" },
+      { name: "JINJA EXAMINATION BOARD MOCK PAPER 2.pdf", size: "251 KB", date: "2026-07-28" },
+      { name: "UTES MOCKS Math 2026.pdf", size: "799 KB", date: "2026-07-28" },
+      { name: "UTES UACE Math 2026.pdf", size: "2.3 MB", date: "2026-07-28" },
+      { name: "UTES UACE Math P1, 2026.pdf", size: "2.2 MB", date: "2026-07-28" },
+      { name: "2026 Wakata Mathematics-- 19-Jul-2026 08-23-45.pdf", size: "648 KB", date: "2026-07-21" },
+      { name: "COUHEIA MTC P2.pdf", size: "1.9 MB", date: "2026-07-21" },
+      { name: "Houma Diocese Mocks Principal Mathematics Paper 1.pdf", size: "1.8 MB", date: "2026-07-21" },
+      { name: "UTES mock 2026.pdf", size: "2.9 MB", date: "2026-07-21" },
+      { name: "Aceiteka uace mtc p1 (1).pdf", size: "3.1 MB", date: "2026-07-16" },
+      { name: "MATHEMATICS PAPER 1 UACE PREMOCK 2026-STUDY NOW CHANNEL_072156.pdf", size: "951 KB", date: "2026-07-14" },
+      { name: "MATHEMATICS PAPER 1.pdf", size: "791 KB", date: "2026-07-14" },
+      { name: "MATHS GUIDE.pdf", size: "553 KB", date: "2026-07-14" },
+      { name: "PURE MATHS ITEM BANK_260613_235038.pdf", size: "478 KB", date: "2026-07-14" },
+      { name: "Aceiteka uace mtc p1 (2).pdf", size: "2 MB", date: "2026-07-09" },
+      { name: "wakata mock math 1.pdf", size: "1.6 MB", date: "2026-07-23" },
+      { name: "WAKATA MOCK p2pdf_260715_204321.pdf", size: "1.9 MB", date: "2026-07-23" },
+      { name: "wakata mock paper 2.pdf", size: "1.6 MB", date: "2026-07-23" },
+      { name: "JJEB MATH 1.pdf", size: "4 MB", date: "2026-07-31" },
+      { name: "JJEB MATH 2.pdf", size: "5.5 MB", date: "2026-07-31" },
+      { name: "ASSHU MOCKS 2026 PRINCIPAL MATHEMATICS 1.pdf", size: "839 KB", date: "2026-07-31" },
+      { name: "UTEC maths.pdf", size: "434 KB", date: "2026-07-31" },
+    ];
+
+    // --- STATE: Keep track of selected files ---
+    let selectedFiles = [];
+
+    // --- UTILITY: Check if a file should have the "NEW" badge ---
+    function isNew(fileDate) {
+      const today = new Date();
+      const fileDateObj = new Date(fileDate);
+      const diffTime = Math.abs(today - fileDateObj);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      return diffDays <= 5;
+    }
+
+    // --- RENDER: Display files in the grid ---
+    function renderFileGrid() {
+      const grid = document.getElementById('mock-file-grid');
+      if (!grid) return;
+
+      grid.innerHTML = filesData.map((file, index) => {
+        const isNewFile = isNew(file.date);
+        const isIncluded = selectedFiles.some(f => f.name === file.name);
+
+        return `
+          <div class="file-card" data-index="${index}">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="file-icon">📄</span>
+              ${isNewFile ? '<span class="new-badge">✨ New</span>' : ''}
+            </div>
+            <div class="file-name" title="${file.name}">${file.name}</div>
+            <div class="file-size">${file.size}</div>
+            <button class="include-btn ${isIncluded ? 'included' : ''}" onclick="toggleInclude('${file.name.replace(/'/g, "\\'")}', '${file.size}')">
+              ${isIncluded ? '✅ Included' : '➕ Include'}
+            </button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // --- FUNCTION: Toggle include/exclude ---
+    window.toggleInclude = function(fileName, fileSize) {
+      const existingIndex = selectedFiles.findIndex(f => f.name === fileName);
+      if (existingIndex > -1) {
+        selectedFiles.splice(existingIndex, 1);
+      } else {
+        selectedFiles.push({ name: fileName, size: fileSize });
+      }
+      updateUI();
+    };
+
+    // --- FUNCTION: Clear selection ---
+    window.clearSelection = function() {
+      selectedFiles = [];
+      updateUI();
+    };
+
+    // --- FUNCTION: Update UI after selection change ---
+    function updateUI() {
+      renderFileGrid();
+
+      const panel = document.getElementById('selected-files-panel');
+      const list = document.getElementById('selected-files-list');
+      const countSpan = document.getElementById('selection-count');
+
+      if (selectedFiles.length === 0) {
+        panel.style.display = 'none';
+        return;
+      }
+
+      panel.style.display = 'block';
+      countSpan.textContent = selectedFiles.length;
+
+      list.innerHTML = selectedFiles.map(file => `
+        <span class="file-tag">
+          ${file.name}
+          <span class="remove-tag" onclick="removeFromSelection('${file.name.replace(/'/g, "\\'")}')">✕</span>
+        </span>
+      `).join('');
+    }
+
+    // --- FUNCTION: Remove single file from selection ---
+    window.removeFromSelection = function(fileName) {
+      const index = selectedFiles.findIndex(f => f.name === fileName);
+      if (index > -1) {
+        selectedFiles.splice(index, 1);
+        updateUI();
+      }
+    };
+
+    // --- DOWNLOAD LIST FUNCTIONALITY ---
+    document.addEventListener('DOMContentLoaded', function() {
+      const downloadBtn = document.getElementById('download-selection-btn');
+      if (downloadBtn) {
+        downloadBtn.addEventListener('click', function() {
+          if (selectedFiles.length === 0) {
+            alert('Your selection is empty. Please include some files first.');
+            return;
+          }
+          const text = selectedFiles.map(f => `- ${f.name} (${f.size})`).join('\n');
+          const blob = new Blob([`Selected A-Level Mock Papers:\n\n${text}`], { type: 'text/plain' });
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = 'my-mock-papers-selection.txt';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        });
+      }
+    });
+
+    // --- INITIAL RENDER ---
+    renderFileGrid();
+  })();
+</script>
+  
 </body>
 </html>
