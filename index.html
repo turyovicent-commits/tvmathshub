@@ -204,87 +204,6 @@
         background: #ffd54f;
     }
 
-    /* === FLOATING BOTTOM CTA === */
-    .floating-bottom-cta {
-        position: fixed;
-        bottom: 90px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 9997;
-        background: linear-gradient(135deg, #0d1b3e, #1a237e);
-        padding: 12px 30px;
-        border-radius: 60px;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        box-shadow: 0 8px 35px rgba(0,0,0,0.5);
-        border: 1px solid rgba(245, 200, 66, 0.2);
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .floating-bottom-cta .info {
-        color: white;
-        font-size: 0.9rem;
-    }
-    .floating-bottom-cta .info strong {
-        color: #f5c842;
-        font-size: 1.1rem;
-    }
-    .floating-bottom-cta .info .old {
-        text-decoration: line-through;
-        color: #888;
-        font-weight: 400;
-        font-size: 0.8rem;
-    }
-    .floating-bottom-cta .buy-btn {
-        background: #f5c842;
-        color: #0d1b3e;
-        padding: 10px 30px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 800;
-        font-size: 0.95rem;
-        transition: all 0.3s;
-        box-shadow: 0 4px 15px rgba(245, 200, 66, 0.3);
-        white-space: nowrap;
-    }
-    .floating-bottom-cta .buy-btn:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 25px rgba(245, 200, 66, 0.5);
-    }
-    .floating-bottom-cta .badge {
-        background: #e53935;
-        color: white;
-        padding: 2px 14px;
-        border-radius: 50px;
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-    }
-    body {
-        padding-top: 64px;
-        padding-bottom: 160px;
-    }
-    @media (max-width: 700px) {
-        .sticky-shop-header { 
-            top: 56px;
-            padding: 6px 15px; 
-        }
-        .sticky-shop-header .brand { font-size: 0.8rem; }
-        .sticky-shop-header .nav-links a { font-size: 0.75rem; padding: 4px 6px; }
-        .sticky-shop-header .nav-links .cta-btn { padding: 6px 14px; font-size: 0.75rem; }
-        .floating-bottom-cta { 
-            padding: 10px 15px; 
-            gap: 10px; 
-            bottom: 80px; 
-            width: 95%; 
-            border-radius: 30px; 
-        }
-        .floating-bottom-cta .info { font-size: 0.75rem; }
-        .floating-bottom-cta .buy-btn { padding: 8px 18px; font-size: 0.8rem; }
-        .floating-bottom-cta .badge { font-size: 0.6rem; padding: 2px 10px; }
-        body { padding-bottom: 140px; }
-    }
   </style>
   
   <!-- ===== GOATCOUNTER ANALYTICS ===== -->
@@ -337,17 +256,6 @@
           <a href="#products">📖 All Items</a>
           <a href="#bundle" class="cta-btn">🔥 Bundle 25k</a>
       </div>
-  </div>
-
-  <!-- ===== FLOATING BOTTOM CTA ===== -->
-  <div class="floating-bottom-cta">
-      <div class="info">
-          📦 <strong>Mega Bundle</strong> 
-          <span class="old">40,000</span> 
-          <span style="color:#f5c842; font-weight:800;">25,000 UGX</span>
-          <span class="badge">10+ Items</span>
-      </div>
-      <a href="#bundle" class="buy-btn">🛒 Buy Now</a>
   </div>
 
   <!-- ============================================================ -->
