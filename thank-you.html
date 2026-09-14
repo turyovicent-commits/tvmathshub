@@ -367,30 +367,48 @@
     const urlParams = new URLSearchParams(window.location.search);
     const product = urlParams.get('product');
 
-    // ===== 3. Complete product map (all 15 products + default) =====
+        // ===== 3. Complete product map (all 27 products + default) =====
     const products = {
-        // A-Level Seminar Items
+        // ===== SENIOR FIVE TERM 3 =====
+        's5_p1_beginning':  { name: 'S5 Term 3 - Paper 1 Beginning', price: 'UGX 3,000' },
+        's5_p1_midterm':    { name: 'S5 Term 3 - Paper 1 Mid Term', price: 'UGX 3,000' },
+        's5_p1_endterm':    { name: 'S5 Term 3 - Paper 1 End of Term', price: 'UGX 3,000' },
+        's5_p2_beginning':  { name: 'S5 Term 3 - Paper 2 Beginning', price: 'UGX 3,000' },
+        's5_p2_midterm':    { name: 'S5 Term 3 - Paper 2 Mid Term', price: 'UGX 3,000' },
+        's5_p2_endterm':    { name: 'S5 Term 3 - Paper 2 End of Term', price: 'UGX 3,000' },
+        's5_term3_bundle':  { name: 'S5 Term 3 Complete Bundle (All 6 Papers)', price: 'UGX 15,000' },
+
+        // ===== A-LEVEL SEMINAR ITEMS =====
         'alevel_seminar_p1':   { name: 'A-Level Principal Mathematics Seminar Items - Paper 1', price: 'UGX 3,000' },
         'alevel_seminar_p2':   { name: 'A-Level Principal Mathematics Seminar Items - Paper 2', price: 'UGX 3,000' },
         'alevel_seminar_both': { name: 'A-Level Principal Mathematics Seminar Items - Both Papers', price: 'UGX 6,000' },
 
-        // Mock Papers
-        'acieteka_joint':  { name: 'Acieteka Joint Mock Paper 1', price: 'UGX 3,000' },
-        'alevel_mock_2026':{ name: 'A-Level Maths Mock 2026 - Paper 1', price: 'UGX 3,000' },
-        'umta_2026':       { name: 'UMTA Mock 2026 - Paper 1', price: 'UGX 3,000' },
-        'wakisha_p1':      { name: 'WAKISHA Joint Mock 2026 - Paper 1', price: 'UGX 3,000' },
-        'wakisha_p2':      { name: 'WAKISHA Joint Mock 2026 - Paper 2', price: 'UGX 3,000' },
-        'wakisha_both':    { name: 'WAKISHA Joint Mock 2026 - Both Papers', price: 'UGX 6,000' },
-        'utec_p1':         { name: 'UTEC Principal Maths Paper 1', price: 'UGX 3,000' },
-        'jjeb_mock':       { name: 'JJEB Mock Principal Maths Paper 1', price: 'UGX 3,000' },
-        'kamssa_2026':     { name: 'KAMSSA Mock 2026 - Paper 1', price: 'UGX 3,000' },
-        'premock_2026':    { name: 'PREMOCK 2026 - Paper 1', price: 'UGX 3,000' },
-        'utes_mock':       { name: 'UTES Mock Maths Paper 1', price: 'UGX 3,000' },
+        // ===== TV MATHSHUB MOCK =====
+        'tvmathshub_mock_p1':   { name: 'TV MATHSHUB Mock - Paper 1', price: 'UGX 3,000' },
+        'tvmathshub_mock_p2':   { name: 'TV MATHSHUB Mock - Paper 2', price: 'UGX 3,000' },
+        'tvmathshub_mock_both': { name: 'TV MATHSHUB Mock - Both Papers', price: 'UGX 6,000' },
 
-        // Bundle
-        'bundle_complete': { name: 'Ultimate Senior Six Exam Bundle (All Materials)', price: 'UGX 25,000' },
+        // ===== MATIGO MOCK =====
+        'matigo_p1': { name: 'MATIGO Mock - Paper 1', price: 'UGX 3,000' },
+        'matigo_p2': { name: 'MATIGO Mock - Paper 2', price: 'UGX 3,000' },
 
-        // Default
+        // ===== OTHER MOCK PAPERS =====
+        'acieteka_joint':      { name: 'Acieteka Joint Mock - Paper 1', price: 'UGX 3,000' },
+        'umta_2026':           { name: 'UMTA Mock 2026 - Paper 1', price: 'UGX 3,000' },
+        'wakisha_p1':          { name: 'WAKISHA Joint Mock - Paper 1', price: 'UGX 3,000' },
+        'wakisha_p2':          { name: 'WAKISHA Joint Mock - Paper 2', price: 'UGX 3,000' },
+        'wakisha_both':        { name: 'WAKISHA Joint Mock - Both Papers', price: 'UGX 6,000' },
+        'utec_p1':             { name: 'UTEC Principal Maths - Paper 1', price: 'UGX 3,000' },
+        'jjeb_mock':           { name: 'JJEB Mock - Paper 1', price: 'UGX 3,000' },
+        'kamssa_2026':         { name: 'KAMSSA Mock 2026 - Paper 1', price: 'UGX 3,000' },
+        'kamssa_premock_p1':   { name: 'KAMSSA Pre-Mock - Paper 1', price: 'UGX 3,000' },
+        'premock_2026':        { name: 'PREMOCK 2026 - Paper 1', price: 'UGX 3,000' },
+        'utes_mock':           { name: 'UTES Mock - Paper 1', price: 'UGX 3,000' },
+
+        // ===== 25K BUNDLE =====
+        'bundle_complete': { name: 'A-Level Principal Mathematics Mock Papers Bundle (14+ Resources)', price: 'UGX 25,000' },
+
+        // ===== DEFAULT =====
         'default': { name: 'your selected item', price: 'the correct amount' }
     };
 
