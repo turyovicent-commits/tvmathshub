@@ -3,14 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thank You for Your Purchase! - TV Math Hub</title>
+    <title>Complete Your Order - TV Math Hub</title>
     <style>
-        /* --- Professional Styling --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.7;
@@ -37,18 +32,9 @@
             padding-bottom: 20px;
             margin-bottom: 30px;
         }
-        .header h1 {
-            font-size: 2.4rem;
-            color: #1a237e;
-            margin-bottom: 5px;
-        }
-        .header h1 span {
-            color: #f5c842;
-        }
-        .header p {
-            color: #555;
-            font-size: 1.1rem;
-        }
+        .header h1 { font-size: 2.4rem; color: #1a237e; margin-bottom: 5px; }
+        .header h1 span { color: #f5c842; }
+        .header p { color: #555; font-size: 1.1rem; }
         .badge {
             display: inline-block;
             background: #e8f5e9;
@@ -90,9 +76,7 @@
             flex-shrink: 0;
             margin-top: 2px;
         }
-        .step-content strong {
-            color: #1a237e;
-        }
+        .step-content strong { color: #1a237e; }
         .payment-box {
             background: linear-gradient(135deg, #e8f0fe 0%, #d4e0f9 100%);
             padding: 25px 30px;
@@ -101,11 +85,7 @@
             text-align: center;
             border: 2px dashed #1a237e;
         }
-        .payment-box .label {
-            font-weight: 600;
-            color: #333;
-            font-size: 1rem;
-        }
+        .payment-box .label { font-weight: 600; color: #333; font-size: 1rem; }
         .phone-number {
             font-size: 2rem;
             font-weight: 800;
@@ -118,11 +98,7 @@
             letter-spacing: 1px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
-        .phone-number small {
-            font-size: 1rem;
-            font-weight: 400;
-            color: #555;
-        }
+        .phone-number small { font-size: 1rem; font-weight: 400; color: #555; }
         .network-tags {
             display: flex;
             justify-content: center;
@@ -141,6 +117,23 @@
         }
         .network-tag.mtn { color: #ffb300; }
         .network-tag.airtel { color: #e53935; }
+        .order-ref-box {
+            background: #fff8e1;
+            border: 2px dashed #f5c842;
+            border-radius: 10px;
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .order-ref-box p:first-child { margin: 0; font-size: 0.9rem; color: #555; }
+        .order-ref-box p:nth-child(2) {
+            margin: 5px 0 0 0;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #1a237e;
+            letter-spacing: 2px;
+        }
+        .order-ref-box p:last-child { margin: 5px 0 0 0; font-size: 0.8rem; color: #777; }
         .action-buttons {
             display: flex;
             flex-wrap: wrap;
@@ -161,87 +154,39 @@
             border: none;
             cursor: pointer;
         }
-        .btn-whatsapp {
-            background: #25d366;
-            color: white;
-        }
+        .btn-whatsapp { background: #25d366; color: white; }
         .btn-whatsapp:hover {
             background: #1da851;
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
         }
-        .btn-email {
-            background: #1a237e;
-            color: white;
-        }
+        .btn-email { background: #1a237e; color: white; }
         .btn-email:hover {
             background: #0d1457;
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(26, 35, 126, 0.35);
-        }
-        .btn-secondary {
-            background: #e8edf5;
-            color: #1a237e;
-        }
-        .btn-secondary:hover {
-            background: #d5dce8;
-            transform: translateY(-2px);
         }
         .info-box {
             padding: 18px 24px;
             border-radius: 10px;
             margin: 18px 0;
         }
-        .info-box.time {
-            background: #fff8e1;
-            border-left: 5px solid #ffa000;
-        }
-        .info-box.refund {
-            background: #e3f2fd;
-            border-left: 5px solid #1976d2;
-        }
-        .info-box.important {
-            background: #fce4ec;
-            border-left: 5px solid #c62828;
-        }
+        .info-box.time { background: #fff8e1; border-left: 5px solid #ffa000; }
+        .info-box.refund { background: #e3f2fd; border-left: 5px solid #1976d2; }
+        .info-box.important { background: #fce4ec; border-left: 5px solid #c62828; }
         .info-box.welcome {
             background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
             border-left: 5px solid #2e7d32;
             text-align: center;
             font-size: 1.05rem;
         }
-        .info-box.welcome strong {
-            color: #1a237e;
-        }
+        .info-box.welcome strong { color: #1a237e; }
         .product-summary {
             background: #f7f9fc;
             border-radius: 10px;
             padding: 15px 20px;
             margin: 15px 0;
             border: 1px solid #e8edf5;
-        }
-        .product-summary table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.95rem;
-        }
-        .product-summary th {
-            text-align: left;
-            padding: 8px 10px 8px 0;
-            color: #1a237e;
-            border-bottom: 2px solid #e8edf5;
-        }
-        .product-summary td {
-            padding: 8px 10px 8px 0;
-            border-bottom: 1px solid #f0f2f5;
-        }
-        .product-summary tr:last-child td {
-            border-bottom: none;
-        }
-        .price-tag {
-            font-weight: 700;
-            color: #1a237e;
-            white-space: nowrap;
         }
         .back-home {
             display: inline-block;
@@ -254,10 +199,7 @@
             border-radius: 30px;
             transition: all 0.2s ease;
         }
-        .back-home:hover {
-            background: #1a237e;
-            color: white;
-        }
+        .back-home:hover { background: #1a237e; color: white; }
         .footer-note {
             margin-top: 35px;
             padding-top: 20px;
@@ -266,10 +208,7 @@
             color: #777;
             text-align: center;
         }
-        .footer-note .stars {
-            color: #f5c842;
-            letter-spacing: 2px;
-        }
+        .footer-note .stars { color: #f5c842; letter-spacing: 2px; }
         @media (max-width: 640px) {
             .container { padding: 25px 20px; }
             .header h1 { font-size: 1.7rem; }
@@ -277,8 +216,6 @@
             .step-box { flex-direction: column; align-items: stretch; gap: 6px; }
             .action-buttons { flex-direction: column; align-items: stretch; }
             .btn { justify-content: center; }
-            .product-summary table { font-size: 0.85rem; }
-            .product-summary td, .product-summary th { padding: 6px 8px 6px 0; }
         }
     </style>
 </head>
@@ -288,16 +225,22 @@
 
     <!-- ===== HEADER ===== -->
     <div class="header">
-        <h1>🎉 Thank You, <span>Student!</span></h1>
-        <p>You're one step away from getting your math materials.</p>
+        <h1>🛒 Complete Your <span>Order</span></h1>
+        <p>Follow the 3 steps below to get your math materials.</p>
         <span class="badge">⭐ Trusted by 500+ Students</span>
+    </div>
+
+    <!-- ===== ORDER REFERENCE ===== -->
+    <div class="order-ref-box">
+        <p>Your Order Reference:</p>
+        <p id="order-ref">TVM-0000</p>
+        <p>Include this in your WhatsApp message</p>
     </div>
 
     <!-- ===== WELCOME MESSAGE ===== -->
     <div class="info-box welcome">
         <p style="margin: 0;">
-            👋 <strong>Welcome to TV Math Hub!</strong> I'm Turyomurugyendo Vicent, Uganda's Top Online Mathematics Tutor. 
-            I'm excited to help you master mathematics with these high-quality materials.
+            👋 <strong>Almost there!</strong> Complete the 3 steps below and I'll send your PDF within 2 hours.
         </p>
     </div>
 
@@ -322,7 +265,7 @@
     <div class="payment-box">
         <div class="label">📱 Send To:</div>
         <div class="phone-number">
-            0780 530 68 <small>(MTN)</small>
+            0784 053 068 <small>(MTN)</small>
         </div>
         <div class="phone-number" style="font-size: 1.6rem; margin-top: 0;">
             0758 569 409 <small>(Airtel)</small>
@@ -353,24 +296,21 @@
     <div class="step-box">
         <div class="step-number">3</div>
         <div class="step-content">
-            <strong>Send the screenshot or transaction ID</strong> along with the <strong>name of the item</strong> you purchased to me via:
+            <strong>Send the screenshot or transaction ID</strong> along with your <strong>order reference</strong> to me via:
         </div>
     </div>
 
     <div class="action-buttons">
-        <a href="https://wa.me/25678053068?text=Hello%20TV%2C%20I%20just%20paid%20for%20%5BItem%20Name%5D.%20Here%20is%20my%20payment%20screenshot.%20My%20transaction%20ID%20is%20%5BID%5D." 
-           class="btn btn-whatsapp" 
-           target="_blank">
+        <a href="https://wa.me/256784053068" class="btn btn-whatsapp" id="whatsapp-btn" target="_blank">
            💬 WhatsApp Me
         </a>
-        <a href="mailto:tvmathshub@gmail.com?subject=PDF%20Purchase%3A%20%5BItem%20Name%5D&body=Hello%20TV%2C%0A%0AI%20just%20paid%20for%20%5BItem%20Name%5D.%0A%0APayment%20Details%3A%0A-%20Network%3A%20%5BMTN%20or%20Airtel%5D%0A-%20Transaction%20ID%3A%20%5BYour%20ID%5D%0A-%20Amount%3A%20UGX%20%5BAmount%5D%0A%0APlease%20find%20my%20payment%20screenshot%20attached.%0A%0AThank%20you!%0A%0ARegards%2C%0A%5BYour%20Name%5D" 
-           class="btn btn-email">
+        <a href="mailto:tvmathshub@gmail.com" class="btn btn-email" id="email-btn">
            📧 Email Me
         </a>
     </div>
 
     <p style="text-align: center; font-size: 0.9rem; color: #777; margin: 5px 0 20px 0;">
-        Or call me directly on <strong>0780 530 68</strong> / <strong>0758 569 409</strong>
+        Or call me directly on <strong>0784 053 068</strong> / <strong>0758 569 409</strong>
     </p>
 
     <!-- ===== DELIVERY TIME ===== -->
@@ -402,7 +342,7 @@
 
     <!-- ===== BACK HOME ===== -->
     <div style="text-align: center;">
-        <a href="https://turyovicent-commits.github.io/tvmathshub/" class="back-home">← Back to TV Math Hub Home</a>
+        <a href="https://www.tvmathshub.com/" class="back-home">← Back to TV Math Hub Home</a>
     </div>
 
     <!-- ===== FOOTER ===== -->
@@ -411,72 +351,71 @@
             <span class="stars">⭐⭐⭐⭐⭐</span> 4.9/5 Rating &bull; 🎯 500+ Students &bull; 🏆 Top Rated Tutor &bull; 🌍 10+ Countries
         </p>
         <p style="margin-top: 5px;">
-            📧 tvmathshub@gmail.com &bull; 📱 0780 530 68 / 0758 569 409
+            📧 tvmathshub@gmail.com &bull; 📱 0784 053 068 / 0758 569 409
         </p>
     </div>
 
 </div>
 
-<!-- ===== JAVASCRIPT: Detect Which Product Was Selected ===== -->
+<!-- ===== JAVASCRIPT ===== -->
 <script>
-    // Get the product name from the URL
+    // ===== 1. Generate unique order reference =====
+    const orderRef = 'TVM-' + Math.floor(1000 + Math.random() * 9000);
+    document.getElementById('order-ref').textContent = orderRef;
+
+    // ===== 2. Get product from URL =====
     const urlParams = new URLSearchParams(window.location.search);
     const product = urlParams.get('product');
 
-    // Map product codes to friendly names and prices
+    // ===== 3. Complete product map (all 15 products + default) =====
     const products = {
-        'alevel_seminar_p1': {
-            name: 'A-Level Principal Mathematics Seminar Items - Paper 1',
-            price: 'UGX 10,000'
-        },
-        'alevel_seminar_p2': {
-            name: 'A-Level Principal Mathematics Seminar Items - Paper 2',
-            price: 'UGX 10,000'
-        },
-        'alevel_seminar_both': {
-            name: 'A-Level Principal Mathematics Seminar Items - Both Papers',
-            price: 'UGX 20,000'
-        },
-        'acieteka_joint': {
-            name: 'Acieteka Joint Mock Paper 1 - Items & Responses',
-            price: 'UGX 5,000'
-        },
-        'alevel_mock_2026': {
-            name: 'A-Level Principal Paper 1 Maths Mock 2026 - Complete Paper & Solutions',
-            price: 'UGX 5,000'
-        },
-        's5_midterm_2': {
-            name: 'Senior Five Mid Term 2 2026 - Complete Paper & Responses',
-            price: 'UGX 3,000'
-        },
-        // Add more products as needed
-        'default': {
-            name: 'your selected item',
-            price: 'the correct amount'
-        }
+        // A-Level Seminar Items
+        'alevel_seminar_p1':   { name: 'A-Level Principal Mathematics Seminar Items - Paper 1', price: 'UGX 3,000' },
+        'alevel_seminar_p2':   { name: 'A-Level Principal Mathematics Seminar Items - Paper 2', price: 'UGX 3,000' },
+        'alevel_seminar_both': { name: 'A-Level Principal Mathematics Seminar Items - Both Papers', price: 'UGX 6,000' },
+
+        // Mock Papers
+        'acieteka_joint':  { name: 'Acieteka Joint Mock Paper 1', price: 'UGX 3,000' },
+        'alevel_mock_2026':{ name: 'A-Level Maths Mock 2026 - Paper 1', price: 'UGX 3,000' },
+        'umta_2026':       { name: 'UMTA Mock 2026 - Paper 1', price: 'UGX 3,000' },
+        'wakisha_p1':      { name: 'WAKISHA Joint Mock 2026 - Paper 1', price: 'UGX 3,000' },
+        'wakisha_p2':      { name: 'WAKISHA Joint Mock 2026 - Paper 2', price: 'UGX 3,000' },
+        'wakisha_both':    { name: 'WAKISHA Joint Mock 2026 - Both Papers', price: 'UGX 6,000' },
+        'utec_p1':         { name: 'UTEC Principal Maths Paper 1', price: 'UGX 3,000' },
+        'jjeb_mock':       { name: 'JJEB Mock Principal Maths Paper 1', price: 'UGX 3,000' },
+        'kamssa_2026':     { name: 'KAMSSA Mock 2026 - Paper 1', price: 'UGX 3,000' },
+        'premock_2026':    { name: 'PREMOCK 2026 - Paper 1', price: 'UGX 3,000' },
+        'utes_mock':       { name: 'UTES Mock Maths Paper 1', price: 'UGX 3,000' },
+
+        // Bundle
+        'bundle_complete': { name: 'Ultimate Senior Six Exam Bundle (All Materials)', price: 'UGX 25,000' },
+
+        // Default
+        'default': { name: 'your selected item', price: 'the correct amount' }
     };
 
-    // Get the product details or use default
+    // ===== 4. Look up product =====
     const selected = products[product] || products['default'];
 
-    // Update the page with the product name
+    // ===== 5. Display product on page =====
     const productSpan = document.getElementById('selected-product');
     if (productSpan) {
         productSpan.textContent = selected.name + ' (' + selected.price + ')';
     }
 
-    // Also update the WhatsApp and Email links to include the product name
-    const whatsappBtn = document.querySelector('.btn-whatsapp');
-    const emailBtn = document.querySelector('.btn-email');
+    // ===== 6. Build WhatsApp link with product + order ref =====
+    const whatsappBtn = document.getElementById('whatsapp-btn');
+    const emailBtn = document.getElementById('email-btn');
 
-    if (whatsappBtn && product && product !== 'default') {
-        const productName = encodeURIComponent(selected.name);
-        whatsappBtn.href = `https://wa.me/25678053068?text=Hello%20TV%2C%20I%20just%20paid%20for%20${productName}%20(${selected.price}).%20Here%20is%20my%20payment%20screenshot.%20My%20transaction%20ID%20is%20%5BID%5D.`;
+    if (whatsappBtn) {
+        const msg = `Hello TV, Order ${orderRef} - I just paid for ${selected.name} (${selected.price}). Here is my payment screenshot. My transaction ID is [ID].`;
+        whatsappBtn.href = `https://wa.me/256784053068?text=${encodeURIComponent(msg)}`;
     }
 
-    if (emailBtn && product && product !== 'default') {
-        const productName = encodeURIComponent(selected.name);
-        emailBtn.href = `mailto:tvmathshub@gmail.com?subject=PDF%20Purchase%3A%20${productName}&body=Hello%20TV%2C%0A%0AI%20just%20paid%20for%20${productName}%20(${selected.price}).%0A%0APayment%20Details%3A%0A-%20Network%3A%20%5BMTN%20or%20Airtel%5D%0A-%20Transaction%20ID%3A%20%5BYour%20ID%5D%0A-%20Amount%3A%20${selected.price}%0A%0APlease%20find%20my%20payment%20screenshot%20attached.%0A%0AThank%20you!%0A%0ARegards%2C%0A%5BYour%20Name%5D`;
+    if (emailBtn) {
+        const subject = `PDF Purchase: ${selected.name} - Order ${orderRef}`;
+        const body = `Hello TV,\n\nI just paid for ${selected.name} (${selected.price}).\n\nOrder Reference: ${orderRef}\nPayment Details:\n- Network: [MTN or Airtel]\n- Transaction ID: [Your ID]\n- Amount: ${selected.price}\n\nPlease find my payment screenshot attached.\n\nThank you!\n\nRegards,\n[Your Name]`;
+        emailBtn.href = `mailto:tvmathshub@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }
 </script>
 
